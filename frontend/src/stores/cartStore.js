@@ -65,7 +65,7 @@ export const useCartStore = create(
           );
           const { data: items } = response.data;
           set({ items, isLoading: false });
-          console.log(items);
+          // console.log(items);
         } catch (error) {
           set({
             error: error.response?.data?.message || "Failed to add item",

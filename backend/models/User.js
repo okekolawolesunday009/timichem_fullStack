@@ -3,9 +3,15 @@ const bcrypt = require("bcryptjs")
 const jwt = require("jsonwebtoken")
 
 const UserSchema = new mongoose.Schema({
-  name: {
+ firstName: {
     type: String,
-    required: [true, "Please add a name"],
+    required: [true, "Please add first name"],
+    trim: true,
+    maxlength: [50, "Name cannot be more than 50 characters"],
+  },
+  lastName: {
+    type: String,
+    required: [true, "Please add last name"],
     trim: true,
     maxlength: [50, "Name cannot be more than 50 characters"],
   },
@@ -21,15 +27,44 @@ const UserSchema = new mongoose.Schema({
     minlength: [6, "Password must be at least 6 characters"],
     select: false,
   },
-  role: {
-    type: String,
-    enum: ["user", "admin"],
-    default: "user",
-  },
-  createdAt: {
+   role: {
+      type: String,
+      enum: ["admin", "manager", "accountant", "user"],
+      default: "user",
+    },
+    permissions: [
+      {
+        type: String,
+        enum: [
+          "view_purchases",
+          "create_purchases",
+          "approve_purchases",
+          "delete_purchases",
+          "view_reports",
+          "manage_vendors",
+          "manage_users",
+          "sales"
+        ],
+      },
+    ],
+    department: {
+      type: String,
+      enum: ["finance", "operations", "sales", "marketing", "hr", "it"],
+    },
+    isActive: {
+      type: Boolean,
+      default: true,
+    },
+    lastLogin: {
+      type: Date,
+    },
+    profileImage: {
+      type: String,
+    },
+    createdAt: {
     type: Date,
     default: Date.now,
-  },
+  }
 })
 
 // Encrypt password using bcrypt

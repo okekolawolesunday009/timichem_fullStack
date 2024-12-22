@@ -15,9 +15,12 @@ export const useAuthStore = create(
     (set, get) => ({
       user: null,
       isAuthenticated: false,
+      isAdmin: false,
+      isManager: false,
+      isAccountant:false,
       isLoading: false,
       error: null,
-
+   
       
 
       login: async (email, password) => {
@@ -42,7 +45,7 @@ export const useAuthStore = create(
           // Real API login for production mode
           try {
             const response = await axios.post(`${API_BASE_URL}/auth/login`, { email, password })
-            // console.log(response.data) 
+            console.log(response.data, email, password) 
             const user = response.data.user
             const token = response.data.token
             // console.log(user)
@@ -65,7 +68,10 @@ export const useAuthStore = create(
         // }
       },
 
-      signup: async (email, name, password, role) => {
+      signup: async ( lastName,
+      email,
+      password,
+     ) => {
         set({ isLoading: true, error: null })
 
         // if (process.env.NODE_ENV === "development") {
@@ -87,10 +93,14 @@ export const useAuthStore = create(
         // } else {
           // Real API signup
           try {
-            const response = await axios.post(`${API_BASE_URL}/auth/register`, { email, name, password , role})
+            const response = await axios.post(`${API_BASE_URL}/auth/register`, { firstName,
+      lastName,
+      email,
+      password,
+      })
 s
             set({
-              user: response.data.user,
+              user: response.user,
               isAuthenticated: true,
               isLoading: false,
             })
@@ -109,8 +119,11 @@ s
       },
 
       checkAuth: () => get().isAuthenticated,
+      
 
       isAdmin: () => get().user?.role === "admin",
+      isAccountant:  () => get().user?.role === "accountant",
+      isManager: () => get().user?.role === "manager",
     }),
     {
       name: "auth-storage",

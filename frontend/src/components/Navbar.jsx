@@ -1,10 +1,11 @@
   import { Link } from "react-router-dom"
   import { useAuthStore } from "../stores/authStore"
   import { useCartStore } from "../stores/cartStore"
-  import { ShoppingCart, Menu, User, LogOut } from "lucide-react"
+  import { ShoppingCart, Menu, User, LogOut, FileText } from "lucide-react"
   import { useEffect, useState } from "react"
 import { useProductStore } from "../stores/productStore"
-import exportToExcel from "../utils/exportToExport"
+import exportToExcel from "../stores/utils/exportToExport"
+// import { Button } from "./ui/button"
 
   const Navbar = ({ onMenuClick }) => {
     const { user, logout } = useAuthStore()
@@ -16,6 +17,10 @@ import exportToExcel from "../utils/exportToExport"
     const handleClick = () => {
       setDropState(!dropState)
     }
+
+      const { isAdmin, isAccountant, isManager} = useAuthStore()
+      // console.log(isAdmin(), isAccountant(), isManager())
+    
 
     useEffect(() => {
      const productStore = fetchProduct()
@@ -41,9 +46,15 @@ import exportToExcel from "../utils/exportToExport"
             <Menu size={24} />
           </button>
 
-          <Link to="/dashboard" className="text-xl font-bold text-white">
-            Bar Inventory
-          </Link>
+          {/* <Link to="/dashboard" className="text-xl font-bold text-white">
+            {isAdmin && "Admin" ||
+            isManager && "manager" ||
+            isAccountant && "accountant" ||
+            "sales"}
+                          
+                        
+          </Link> */}
+          <p>{user?.role === "user" ? "Sales" : user?.role}</p>
         </div>
 
         <div className="flex items-center space-x-4">
@@ -60,7 +71,15 @@ import exportToExcel from "../utils/exportToExport"
           </Link>
 
             <div>
-              <button onClick={handleExport}>Export stock to Excel</button>
+              {isAdmin()  === true || isAccountant() === true && (
+                <button className="flex items-center" onClick={handleExport}>
+                                <FileText className="mr-2 h-4 w-4" />
+                               Stock
+                              </button>
+                              
+
+
+              )}
             </div>
 
           <div className="relative group">

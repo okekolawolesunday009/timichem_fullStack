@@ -1,6 +1,6 @@
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
-import { generateBarcode } from "../utils/barcodeUtils";
+import { generateBarcode } from "./utils/barcodeUtils";
 import axios from "axios";
 
 // Use different API URLs for development and production

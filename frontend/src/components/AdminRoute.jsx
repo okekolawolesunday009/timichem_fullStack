@@ -2,9 +2,9 @@ import { Navigate, Outlet } from "react-router-dom"
 import { useAuthStore } from "../stores/authStore"
 
 const AdminRoute = () => {
-  const { isAdmin } = useAuthStore()
+  const { isAdmin , isManager} = useAuthStore()
 
-  if (!isAdmin()) {
+  if (!isAdmin() && !isManager()) {
     return <Navigate to="/dashboard" />
   }
 

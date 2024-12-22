@@ -24,7 +24,7 @@ endOfRange.setHours(23, 59, 59, 999); // End of today
     const todaysOrders = await Order.find({
       createdAt: { $gte: startOfRange, $lte: endOfRange },
       // status: "completed",
-      user: req.user.id,
+      // user: req.user.id,
     });
     console.log(todaysOrders)
 

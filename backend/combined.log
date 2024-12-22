@@ -287,3 +287,174 @@
 {"level":"info","message":"Server running on port 5000","timestamp":"2025-05-29T16:09:24.025Z"}
 {"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-31T01:27:43.083Z"}
 {"level":"info","message":"Server running on port 5000","timestamp":"2025-05-31T01:27:43.092Z"}
+{"level":"error","message":"MongoDB connection error:","timestamp":"2025-05-31T11:07:24.512Z"}
+{"level":"error","message":"MongoDB connection error:","timestamp":"2025-05-31T11:10:15.272Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-31T11:10:47.059Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-31T11:10:47.071Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-31T11:21:14.555Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-31T11:21:14.568Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-31T11:22:44.691Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-31T11:22:44.699Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-06-05T07:02:48.117Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-06-05T07:02:48.132Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-06-05T17:18:54.330Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-06-05T17:18:54.339Z"}
+{"level":"error","message":"500 - User validation failed: lastNaame: Please add last name, firstName: Please add first name - /api/auth/login - POST - 127.0.0.1","timestamp":"2025-06-05T17:19:03.758Z"}
+{"level":"error","message":"500 - User validation failed: lastNaame: Please add last name, firstName: Please add first name - /api/auth/login - POST - 127.0.0.1","timestamp":"2025-06-05T17:20:03.739Z"}
+{"level":"error","message":"500 - User validation failed: lastNaame: Please add last name, firstName: Please add first name - /api/auth/login - POST - 127.0.0.1","timestamp":"2025-06-05T17:21:54.146Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-06-05T17:23:07.987Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-06-05T17:23:08.002Z"}
+{"level":"error","message":"500 - User validation failed: lastNaame: Please add last name, firstName: Please add first name - /api/auth/login - POST - 127.0.0.1","timestamp":"2025-06-05T17:23:16.376Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-06-05T17:23:36.787Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-06-05T17:23:36.795Z"}
+{"level":"error","message":"500 - User validation failed: lastNaame: Please add last name, firstName: Please add first name - /api/auth/login - POST - 127.0.0.1","timestamp":"2025-06-05T17:23:39.302Z"}
+{"level":"error","message":"500 - User validation failed: lastNaame: Please add last name, firstName: Please add first name - /api/auth/login - POST - 127.0.0.1","timestamp":"2025-06-05T17:24:47.345Z"}
+{"level":"error","message":"500 - User validation failed: lastNaame: Please add last name, firstName: Please add first name - /api/auth/login - POST - 127.0.0.1","timestamp":"2025-06-05T17:24:48.467Z"}
+{"level":"error","message":"500 - User validation failed: lastNaame: Please add last name, firstName: Please add first name - /api/auth/login - POST - 127.0.0.1","timestamp":"2025-06-05T17:25:29.638Z"}
+{"level":"error","message":"500 - User validation failed: lastNaame: Please add last name, firstName: Please add first name - /api/auth/login - POST - 127.0.0.1","timestamp":"2025-06-05T17:25:30.468Z"}
+{"level":"error","message":"500 - User validation failed: lastNaame: Please add last name, firstName: Please add first name - /api/auth/login - POST - 127.0.0.1","timestamp":"2025-06-05T17:25:31.388Z"}
+{"level":"error","message":"500 - User validation failed: lastNaame: Please add last name, firstName: Please add first name - /api/auth/login - POST - 127.0.0.1","timestamp":"2025-06-05T17:25:38.033Z"}
+{"level":"error","message":"500 - User validation failed: lastNaame: Please add last name, firstName: Please add first name - /api/auth/login - POST - 127.0.0.1","timestamp":"2025-06-05T17:28:37.094Z"}
+{"level":"error","message":"500 - User validation failed: lastNaame: Please add last name, firstName: Please add first name - /api/auth/register - POST - 127.0.0.1","timestamp":"2025-06-05T17:48:49.370Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-06-05T17:50:34.888Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-06-05T17:50:34.897Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-06-05T17:52:40.147Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-06-05T17:52:40.160Z"}
+{"level":"error","message":"500 - Assignment to constant variable. - /api/auth/register - POST - 127.0.0.1","timestamp":"2025-06-05T17:52:43.988Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-06-05T17:54:44.272Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-06-05T17:54:44.288Z"}
+{"level":"error","message":"500 - Assignment to constant variable. - /api/auth/register - POST - 127.0.0.1","timestamp":"2025-06-05T17:54:54.220Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-06-05T17:58:24.321Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-06-05T17:58:24.329Z"}
+{"level":"error","message":"500 - Cannot set headers after they are sent to the client - /api/auth/register - POST - 127.0.0.1","timestamp":"2025-06-05T17:58:38.033Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-06-05T18:02:03.172Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-06-05T18:02:03.185Z"}
+{"level":"error","message":"500 - Cannot set headers after they are sent to the client - /api/auth/register - POST - 127.0.0.1","timestamp":"2025-06-05T18:02:29.029Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-06-05T18:04:16.189Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-06-05T18:04:16.200Z"}
+{"level":"error","message":"500 - Cannot set headers after they are sent to the client - /api/auth/register - POST - 127.0.0.1","timestamp":"2025-06-05T18:04:25.581Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-06-05T18:29:15.578Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-06-05T18:29:15.612Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-06-05T18:36:05.146Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-06-05T18:36:05.159Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-06-05T19:07:40.098Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-06-05T19:07:40.112Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-06-05T19:26:43.686Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-06-05T19:26:43.702Z"}
+{"level":"error","message":"500 - Cannot set headers after they are sent to the client - /api/auth/register - POST - 127.0.0.1","timestamp":"2025-06-05T19:29:26.496Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-06-05T19:30:46.080Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-06-05T19:30:46.093Z"}
+{"level":"error","message":"500 - Cannot set headers after they are sent to the client - /api/auth/register - POST - 127.0.0.1","timestamp":"2025-06-05T19:31:16.442Z"}
+{"level":"error","message":"500 - Cannot set headers after they are sent to the client - /api/auth/register - POST - 127.0.0.1","timestamp":"2025-06-05T19:32:22.412Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-06-06T17:55:46.107Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-06-06T17:55:46.120Z"}
+{"level":"error","message":"500 - Cannot set headers after they are sent to the client - /api/auth/register - POST - 127.0.0.1","timestamp":"2025-06-07T05:49:09.209Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-06-07T06:10:05.509Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-06-07T06:10:05.523Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-06-07T06:14:28.021Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-06-07T06:14:28.037Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-06-07T06:28:51.810Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-06-07T06:28:51.819Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-06-07T06:30:44.935Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-06-07T06:30:44.950Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-06-07T06:36:53.338Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-06-07T06:36:53.352Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-06-07T06:39:48.899Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-06-07T06:39:48.909Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-06-07T06:40:53.244Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-06-07T06:40:53.258Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-06-07T06:42:04.277Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-06-07T06:42:04.291Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-06-07T07:16:51.727Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-06-07T07:16:51.744Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-06-07T07:23:29.953Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-06-07T07:23:29.969Z"}
+{"level":"error","message":"500 - User validation failed: role: Cast to string failed for value \"[ 'view_purchases', 'sales' ]\" (type Array) at path \"role\" - /api/users - POST - 127.0.0.1","timestamp":"2025-06-07T07:35:57.724Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-06-07T08:03:35.028Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-06-07T08:03:35.041Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-06-07T08:04:38.800Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-06-07T08:04:38.811Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-06-07T08:06:44.045Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-06-07T08:06:44.057Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-06-07T08:07:25.250Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-06-07T08:07:25.265Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-06-07T08:10:59.331Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-06-07T08:10:59.346Z"}
+{"level":"error","message":"500 - Cannot read properties of undefined (reading 'id') - /api/users - GET - 127.0.0.1","timestamp":"2025-06-07T08:11:02.090Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-06-07T08:12:30.974Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-06-07T08:12:30.987Z"}
+{"level":"error","message":"500 - Cannot read properties of undefined (reading 'role') - /api/users - GET - 127.0.0.1","timestamp":"2025-06-07T08:12:34.121Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-06-07T08:16:13.067Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-06-07T08:16:13.081Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-06-07T08:17:18.571Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-06-07T08:17:18.586Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-06-07T08:18:21.112Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-06-07T08:18:21.138Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-06-07T08:18:51.945Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-06-07T08:18:51.960Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-06-07T08:20:48.192Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-06-07T08:20:48.204Z"}
+{"level":"error","message":"500 - Cannot read properties of undefined (reading 'id') - /api/users - GET - 127.0.0.1","timestamp":"2025-06-07T08:20:50.678Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-06-07T08:21:41.207Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-06-07T08:21:41.221Z"}
+{"level":"error","message":"500 - Cannot read properties of undefined (reading '_id') - /api/users - GET - 127.0.0.1","timestamp":"2025-06-07T08:21:43.557Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-06-07T08:22:40.293Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-06-07T08:22:40.324Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-06-07T08:23:14.972Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-06-07T08:23:14.983Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-06-07T08:23:34.586Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-06-07T08:23:34.595Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-06-07T08:23:57.273Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-06-07T08:23:57.287Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-06-07T08:24:16.181Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-06-07T08:24:16.191Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-06-07T08:24:52.414Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-06-07T08:24:52.434Z"}
+{"level":"error","message":"500 - Cannot read properties of undefined (reading 'id') - /api/users - GET - 127.0.0.1","timestamp":"2025-06-07T08:24:58.183Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-06-07T08:25:18.893Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-06-07T08:25:18.910Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-06-07T20:19:02.288Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-06-07T20:19:02.300Z"}
+{"level":"error","message":"400 - Unexpected token 'e', ...\"seDate\": new Date(\"2\"... is not valid JSON - /api/purchases - POST - 127.0.0.1","timestamp":"2025-06-07T20:24:47.022Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-06-07T20:27:44.616Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-06-07T20:27:44.635Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-06-08T08:20:16.879Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-06-08T08:20:16.895Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-06-08T08:35:17.358Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-06-08T08:35:17.373Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-06-08T11:12:43.023Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-06-08T11:12:43.033Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-06-08T14:38:30.593Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-06-08T14:38:30.607Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-06-08T14:44:45.475Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-06-08T14:44:45.491Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-06-08T14:45:01.595Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-06-08T14:45:01.605Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-06-08T14:48:32.650Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-06-08T14:48:32.667Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-06-08T15:27:38.332Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-06-08T15:27:38.343Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-06-08T15:44:49.851Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-06-08T15:44:49.864Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-06-08T15:47:50.439Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-06-08T15:47:50.452Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-06-08T15:55:06.379Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-06-08T15:55:06.393Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-06-08T15:56:15.483Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-06-08T15:56:15.497Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-06-08T16:07:37.217Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-06-08T16:07:37.229Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-06-08T16:08:40.581Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-06-08T16:08:40.600Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-06-08T16:33:03.462Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-06-08T16:33:03.478Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-06-08T16:35:27.724Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-06-08T16:35:27.737Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-06-08T16:36:16.704Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-06-08T16:36:16.721Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-06-08T17:33:23.637Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-06-08T17:33:23.657Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-06-08T17:44:33.691Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-06-08T17:44:33.704Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-06-10T14:36:47.262Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-06-10T14:36:47.270Z"}

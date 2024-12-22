@@ -4,8 +4,8 @@ import { useState, useEffect } from "react";
 import { useAuthStore } from "../stores/authStore";
 import { useProductStore } from "../stores/productStore";
 import { useCartStore } from "../stores/cartStore";
-import { formatCurrency } from "../utils/barcodeUtils";
-import StatsCard from "../components/StatsCard";
+import { formatCurrency } from "../stores/utils/barcodeUtils";
+import StatsCard from "../components/StatsCard.tsx";
 
 import {
   BarChart,
@@ -74,6 +74,7 @@ const Dashboard = () => {
           const saleDate = new Date(sale.createdAt);
           return saleDate >= sixMonthStart && saleDate <= sixMonthEnd;
         });
+        console.log(rawSales)
 
         const salesMap = {};
         filteredSales.forEach((sale) => {
@@ -110,6 +111,7 @@ const Dashboard = () => {
     };
 
     fetchSales();
+
   }, [getSales]);
 
   return (
@@ -117,7 +119,7 @@ const Dashboard = () => {
       <div className="flex items-center justify-between mb-6">
         <h1 className="text-2xl font-bold">Dashboard</h1>
         <div className="text-slate-400">
-          Welcome back, <span className="text-white font-medium">{user?.username}</span>
+          Welcome back, <span className="text-white font-medium">{user?.lastName}</span>
         </div>
       </div>
 
@@ -129,6 +131,8 @@ const Dashboard = () => {
           icon={<Package size={24} />}
           color="bg-blue-900/50 text-blue-400"
         />
+
+        
         <StatsCard
           title="Inventory Value"
           value={formatCurrency(totalValue)}

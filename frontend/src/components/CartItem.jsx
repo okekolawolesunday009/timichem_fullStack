@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { formatCurrency } from "../utils/barcodeUtils";
+import { formatCurrency } from "../stores/utils/barcodeUtils";
 import { useCartStore } from "../stores/cartStore";
 import { Minus, Plus, Trash } from "lucide-react";
 import { useNavigate } from "react-router-dom";

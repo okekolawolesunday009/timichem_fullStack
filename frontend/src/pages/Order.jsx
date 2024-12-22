@@ -2,7 +2,7 @@ import React from 'react'
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useCartStore } from "../stores/cartStore";
-import { formatCurrency } from "../utils/barcodeUtils";
+import { formatCurrency } from "../stores/utils/barcodeUtils";
 import CartItem from "../components/CartItem";
 import {
   ShoppingCart,

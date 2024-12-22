@@ -1,10 +1,10 @@
 import { Link, useLocation } from "react-router-dom"
 import { useAuthStore } from "../stores/authStore"
-import { Home, Package, PlusCircle, Scan, ShoppingCart, X } from "lucide-react"
+import { BookUser, Home, Package, PlusCircle, Scan, Sheet, ShoppingCart, Users, Weight, X } from "lucide-react"
 
 const Sidebar = ({ isOpen, setIsOpen }) => {
   const location = useLocation()
-  const { isAdmin } = useAuthStore()
+  const { isAdmin, isAccountant, isManager} = useAuthStore()
 
   const navItems = [
     {
@@ -17,26 +17,58 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
       path: "/products",
       icon: <Package size={20} />,
     },
+    
+  ]
+
+    // Add admin-only routes
+  if (isAdmin() || isManager()) {
+
+    navItems.splice(2, 0, 
+    
     {
       name: "Scanner",
       path: "/scanner",
       icon: <Scan size={20} />,
     },
+
     {
       name: "Cart",
       path: "/cart",
       icon: <ShoppingCart size={20} />,
-    },
-  ]
+    },)  
+  }
+
+   // Add admin-only routes
+  if (isAdmin() || isManager() || isAccountant()) {
+
+    navItems.splice(2, 0, {
+      name: "Report",
+      path: "/report",
+      icon: <Sheet size={20} />,
+    },  {
+      name: "Purchases",
+      path: "/purchases",
+      icon: <Weight size={20} />,
+    },  {
+      name: "Vendors",
+      path: "/vendors",
+      icon: <BookUser size={20} />,
+    })  
+  }
 
   // Add admin-only routes
-  if (isAdmin()) {
+  if (isAdmin()  || isManager()) {
 
     navItems.splice(2, 0, {
       name: "Add Product",
       path: "/add-product",
       icon: <PlusCircle size={20} />,
-    })
+    },
+  {
+      name: "Add User",
+      path: "/users",
+      icon: <Users size={20} />,
+    },)
   }
 
   return (
@@ -53,7 +85,7 @@ const Sidebar = ({ isOpen, setIsOpen }) => {
         } md:translate-x-0 md:static md:z-0`}
       >
         <div className="flex items-center justify-between h-16 px-6 border-b border-slate-700">
-          <h1 className="text-xl font-bold text-white">Bar Inventory</h1>
+          <h1 className="text-xl font-bold text-white">Company Inventory</h1>
           <button
             className="md:hidden p-1 rounded-md hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-slate-500"
             onClick={() => setIsOpen(false)}

@@ -3,13 +3,16 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useProductStore } from "../stores/productStore";
-import { generateBarcode } from "../utils/barcodeUtils";
+import { generateBarcode } from "../stores/utils/barcodeUtils";
 import { Save, X, Barcode } from "lucide-react";
 import { useParams } from "react-router-dom";
+import { userStore } from "@/stores/UserStore";
 
 const AddProduct = () => {
   const { id } = useParams();
   const navigate = useNavigate();
+
+
   const { addProduct, categories, product, fetchProductById, updateProduct, isLoading } =
     useProductStore();
 

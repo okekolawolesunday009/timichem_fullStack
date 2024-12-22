@@ -55,3 +55,34 @@
 {"level":"error","message":"MongoDB connection error:","timestamp":"2025-05-27T07:25:23.992Z"}
 {"level":"error","message":"MongoDB connection error:","timestamp":"2025-05-27T07:28:43.368Z"}
 {"level":"error","message":"500 - Cast to ObjectId failed for value \"sales\" (type string) at path \"_id\" for model \"Order\" - /api/orders/sales - GET - ::1","timestamp":"2025-05-29T09:51:12.991Z"}
+{"level":"error","message":"MongoDB connection error:","timestamp":"2025-05-31T11:07:24.512Z"}
+{"level":"error","message":"MongoDB connection error:","timestamp":"2025-05-31T11:10:15.272Z"}
+{"level":"error","message":"500 - User validation failed: lastNaame: Please add last name, firstName: Please add first name - /api/auth/login - POST - 127.0.0.1","timestamp":"2025-06-05T17:19:03.758Z"}
+{"level":"error","message":"500 - User validation failed: lastNaame: Please add last name, firstName: Please add first name - /api/auth/login - POST - 127.0.0.1","timestamp":"2025-06-05T17:20:03.739Z"}
+{"level":"error","message":"500 - User validation failed: lastNaame: Please add last name, firstName: Please add first name - /api/auth/login - POST - 127.0.0.1","timestamp":"2025-06-05T17:21:54.146Z"}
+{"level":"error","message":"500 - User validation failed: lastNaame: Please add last name, firstName: Please add first name - /api/auth/login - POST - 127.0.0.1","timestamp":"2025-06-05T17:23:16.376Z"}
+{"level":"error","message":"500 - User validation failed: lastNaame: Please add last name, firstName: Please add first name - /api/auth/login - POST - 127.0.0.1","timestamp":"2025-06-05T17:23:39.302Z"}
+{"level":"error","message":"500 - User validation failed: lastNaame: Please add last name, firstName: Please add first name - /api/auth/login - POST - 127.0.0.1","timestamp":"2025-06-05T17:24:47.345Z"}
+{"level":"error","message":"500 - User validation failed: lastNaame: Please add last name, firstName: Please add first name - /api/auth/login - POST - 127.0.0.1","timestamp":"2025-06-05T17:24:48.467Z"}
+{"level":"error","message":"500 - User validation failed: lastNaame: Please add last name, firstName: Please add first name - /api/auth/login - POST - 127.0.0.1","timestamp":"2025-06-05T17:25:29.638Z"}
+{"level":"error","message":"500 - User validation failed: lastNaame: Please add last name, firstName: Please add first name - /api/auth/login - POST - 127.0.0.1","timestamp":"2025-06-05T17:25:30.468Z"}
+{"level":"error","message":"500 - User validation failed: lastNaame: Please add last name, firstName: Please add first name - /api/auth/login - POST - 127.0.0.1","timestamp":"2025-06-05T17:25:31.388Z"}
+{"level":"error","message":"500 - User validation failed: lastNaame: Please add last name, firstName: Please add first name - /api/auth/login - POST - 127.0.0.1","timestamp":"2025-06-05T17:25:38.033Z"}
+{"level":"error","message":"500 - User validation failed: lastNaame: Please add last name, firstName: Please add first name - /api/auth/login - POST - 127.0.0.1","timestamp":"2025-06-05T17:28:37.094Z"}
+{"level":"error","message":"500 - User validation failed: lastNaame: Please add last name, firstName: Please add first name - /api/auth/register - POST - 127.0.0.1","timestamp":"2025-06-05T17:48:49.370Z"}
+{"level":"error","message":"500 - Assignment to constant variable. - /api/auth/register - POST - 127.0.0.1","timestamp":"2025-06-05T17:52:43.988Z"}
+{"level":"error","message":"500 - Assignment to constant variable. - /api/auth/register - POST - 127.0.0.1","timestamp":"2025-06-05T17:54:54.220Z"}
+{"level":"error","message":"500 - Cannot set headers after they are sent to the client - /api/auth/register - POST - 127.0.0.1","timestamp":"2025-06-05T17:58:38.033Z"}
+{"level":"error","message":"500 - Cannot set headers after they are sent to the client - /api/auth/register - POST - 127.0.0.1","timestamp":"2025-06-05T18:02:29.029Z"}
+{"level":"error","message":"500 - Cannot set headers after they are sent to the client - /api/auth/register - POST - 127.0.0.1","timestamp":"2025-06-05T18:04:25.581Z"}
+{"level":"error","message":"500 - Cannot set headers after they are sent to the client - /api/auth/register - POST - 127.0.0.1","timestamp":"2025-06-05T19:29:26.496Z"}
+{"level":"error","message":"500 - Cannot set headers after they are sent to the client - /api/auth/register - POST - 127.0.0.1","timestamp":"2025-06-05T19:31:16.442Z"}
+{"level":"error","message":"500 - Cannot set headers after they are sent to the client - /api/auth/register - POST - 127.0.0.1","timestamp":"2025-06-05T19:32:22.412Z"}
+{"level":"error","message":"500 - Cannot set headers after they are sent to the client - /api/auth/register - POST - 127.0.0.1","timestamp":"2025-06-07T05:49:09.209Z"}
+{"level":"error","message":"500 - User validation failed: role: Cast to string failed for value \"[ 'view_purchases', 'sales' ]\" (type Array) at path \"role\" - /api/users - POST - 127.0.0.1","timestamp":"2025-06-07T07:35:57.724Z"}
+{"level":"error","message":"500 - Cannot read properties of undefined (reading 'id') - /api/users - GET - 127.0.0.1","timestamp":"2025-06-07T08:11:02.090Z"}
+{"level":"error","message":"500 - Cannot read properties of undefined (reading 'role') - /api/users - GET - 127.0.0.1","timestamp":"2025-06-07T08:12:34.121Z"}
+{"level":"error","message":"500 - Cannot read properties of undefined (reading 'id') - /api/users - GET - 127.0.0.1","timestamp":"2025-06-07T08:20:50.678Z"}
+{"level":"error","message":"500 - Cannot read properties of undefined (reading '_id') - /api/users - GET - 127.0.0.1","timestamp":"2025-06-07T08:21:43.557Z"}
+{"level":"error","message":"500 - Cannot read properties of undefined (reading 'id') - /api/users - GET - 127.0.0.1","timestamp":"2025-06-07T08:24:58.183Z"}
+{"level":"error","message":"400 - Unexpected token 'e', ...\"seDate\": new Date(\"2\"... is not valid JSON - /api/purchases - POST - 127.0.0.1","timestamp":"2025-06-07T20:24:47.022Z"}

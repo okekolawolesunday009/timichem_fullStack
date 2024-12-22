@@ -10,6 +10,7 @@ require("dotenv").config()
 
 // Import routes
 const authRoutes = require("./routes/auth")
+const userRoutes = require("./routes/users")
 const productRoutes = require("./routes/products")
 const cartRoutes = require("./routes/cart")
 const orderRoutes = require("./routes/orders")
@@ -50,10 +51,15 @@ app.use("/api/auth", apiLimiter)
 
 // Routes
 app.use("/api/auth", authRoutes)
+app.use("/api/users", userRoutes)
 app.use("/api/products", productRoutes)
 app.use("/api/cart", cartRoutes)
 app.use("/api/orders", orderRoutes)
 app.use("/api/dashboard", dashboardRoutes)
+// Routes
+app.use("/api/purchases", require("./routes/purchases"))
+app.use("/api/vendors", require("./routes/vendors"))
+app.use("/api/reports", require("./routes/reports"))
 
 // Serve static files (for barcode images if needed)
 app.use("/public", express.static(path.join(__dirname, "public")))

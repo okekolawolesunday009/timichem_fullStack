@@ -6,7 +6,8 @@ import { useAuthStore } from "../stores/authStore"
 import { UserPlus } from "lucide-react"
 
 const Signup = () => {
-  const [name, setName] = useState("")
+  const [firstName, setFirstName] = useState("")
+    const [lastName, setLastName] = useState("")
   const [password, setPassword] = useState("")
   const [confirmPassword, setConfirmPassword] = useState("")
   const [email, setEmail] = useState("")
@@ -35,7 +36,7 @@ const Signup = () => {
     }
 
 
-    signup(email,name, password, role)
+    signup(email, firstName,lastName, password)
     if (checkAuth) {
       navigate("/dashboard")
     }
@@ -59,13 +60,28 @@ const Signup = () => {
 
           <div>
             <label htmlFor="name" className="block text-sm font-medium text-slate-300 mb-1">
-              Username
+              First Name
             </label>
             <input
-              id="name"
+              id="firstName"
               type="text"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
+              value={firstName}
+              onChange={(e) => setFirstName(e.target.value)}
+              className="input"
+              placeholder="Choose a username"
+              required
+            />
+             
+          </div>
+          <div>
+            <label htmlFor="name" className="block text-sm font-medium text-slate-300 mb-1">
+              Last Name
+            </label>
+            <input
+              id="lastName"
+              type="text"
+              value={lastName}
+              onChange={(e) => setLastName(e.target.value)}
               className="input"
               placeholder="Choose a username"
               required

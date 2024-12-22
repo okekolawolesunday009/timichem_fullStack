@@ -1,4 +1,4 @@
-import { formatCurrency } from "../utils/barcodeUtils"
+import { formatCurrency } from "../stores/utils/barcodeUtils"
 import { useCartStore } from "../stores/cartStore"
 import { useAuthStore } from "../stores/authStore"
 import { ShoppingCart, Edit, Trash } from "lucide-react"

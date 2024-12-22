@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef } from "react"
 import { useProductStore } from "../stores/productStore"
 import { useCartStore } from "../stores/cartStore"
-import { formatCurrency } from "../utils/barcodeUtils"
+import { formatCurrency } from "../stores/utils/barcodeUtils"
 import Quagga from "quagga"
 import { Camera, ShoppingCart, X, Check } from "lucide-react"
 
