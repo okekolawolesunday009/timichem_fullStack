@@ -23,7 +23,7 @@ jobs:
           # Add host key (avoids host verification prompt)
           ssh-keyscan -H 184.73.149.8 >> ~/.ssh/known_hosts
 
-          # Run remote deploy
+          # Run remote deploy sh
           ssh -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa ubuntu@184.73.149.8 '
             set -e
             cd timchem || exit 1
