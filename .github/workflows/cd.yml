@@ -26,7 +26,7 @@ jobs:
           # Run remote deploy sh
           ssh -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa ubuntu@184.73.149.8 '
             set -e
-            cd timchem- || exit 1
+            cd timichem- || exit 1
             git pull origin main
             cd my-app
             chmod +x cicd-deploy.sh
