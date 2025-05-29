@@ -132,7 +132,7 @@ exports.updateProfile = async (req, res, next) => {
 const sendTokenResponse = (user, statusCode, res) => {
   // Create token
   const token = user.getSignedJwtToken()
-  // console.log(token, "ww")
+  console.log(token)
 
   // Remove password from output
   user.password = undefined

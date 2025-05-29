@@ -101,6 +101,7 @@ export const useProductStore = create(
             // console.log(products)
 
             set({ products, isLoading: false });
+            return products;
           } catch (error) {
             set({
               error:

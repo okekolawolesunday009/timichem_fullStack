@@ -2,11 +2,7 @@ import { create } from "zustand";
 import { persist } from "zustand/middleware";
 import axios from "axios";
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
-
-
-
-
+const API_BASE_URL = "http://localhost:5000/api";
 
 export const useCartStore = create(
   persist(
@@ -35,15 +31,33 @@ export const useCartStore = create(
           });
         }
       },
-      
+
+      getSales: async () => {
+        set({ isLoading: true, error: null });
+        try {
+          const token = localStorage.getItem("authToken");
+
+          const response = await axios.get(`${API_BASE_URL}/orders/sales`, {
+            headers: { Authorization: `Bearer ${token}` },
+          });
+
+          console.log(response.data); // ✅ Confirm structure
+          set({ items: response.data, isLoading: false });
+          return response.data; // ✅ Return only the data
+        } catch (error) {
+          set({
+            error: error.response?.data?.message || "Failed to get order item",
+            isLoading: false,
+          });
+        }
+      },
 
       addItem: async (productId, quantity = 1) => {
         set({ isLoading: true, error: null });
         try {
           const token = localStorage.getItem("authToken");
-          // console.log(token, productId, quantity)
           const response = await axios.post(
-            `${process.env.API_BASE_URL}/cart/add`,
+            `${API_BASE_URL}/cart/add`,
             { productId, quantity },
             {
               headers: { Authorization: `Bearer ${token}` },
@@ -51,6 +65,7 @@ export const useCartStore = create(
           );
           const { data: items } = response.data;
           set({ items, isLoading: false });
+          console.log(items);
         } catch (error) {
           set({
             error: error.response?.data?.message || "Failed to add item",
@@ -70,7 +85,6 @@ export const useCartStore = create(
 
           // Filter out the removed item
           set((state) => ({
-            
             items: state.items.filter((item) => item._id !== id),
             isLoading: false,
           }));
@@ -124,36 +138,31 @@ export const useCartStore = create(
         set({ isLoading: true, error: null });
         try {
           const token = localStorage.getItem("authToken");
-          // console.log(paymentMethod)
           const response = await axios.post(
             `${API_BASE_URL}/orders`,
             { paymentMethod },
-            {
-              headers: { Authorization: `Bearer ${token}` },
-            }
+            { headers: { Authorization: `Bearer ${token}` } }
           );
-          // console.log(response)
-          set({ items: [],order:response.data.order, isLoading: false });
-          // return response.data;
+          set({ items: [], order: response.data.order, isLoading: false });
+          return response.data.order; // return order on success
         } catch (error) {
-          set({
-            error: error.response?.data?.message || "Checkout failed",
-            isLoading: false,
-          });
-          return null;
+          const errorMsg = error.response?.data?.message || "Checkout failed";
+          set({ error: errorMsg, isLoading: false });
+          console.log(errorMsg);
+          throw new Error(errorMsg); // <-- throw here instead of returning
         }
       },
 
       getItemCount: () => {
         const items = get().items || [];
         // console.log(items)
-        return items.reduce((count, item) => count + item.quantity, 0)
+        return items;
       },
 
       getTotal: () => {
         const items = get().items || [];
-                // console.log(items)
-        return items.reduce((total, item) => total + item.price * item.quantity, 0)
+        // console.log(items)
+        return items;
       },
     }),
     {

@@ -58,5 +58,7 @@ OrderSchema.pre("save", function (next) {
   next()
 })
 
+// Add this static method to your schema
+
 module.exports = mongoose.model("Order", OrderSchema)
 

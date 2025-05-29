@@ -2,16 +2,32 @@
   import { useAuthStore } from "../stores/authStore"
   import { useCartStore } from "../stores/cartStore"
   import { ShoppingCart, Menu, User, LogOut } from "lucide-react"
-  import { useState } from "react"
+  import { useEffect, useState } from "react"
+import { useProductStore } from "../stores/productStore"
+import exportToExcel from "../utils/exportToExport"
 
   const Navbar = ({ onMenuClick }) => {
     const { user, logout } = useAuthStore()
     const { getItemCount } = useCartStore()
+    const { products, fetchProduct } = useProductStore()
+    const [storeProduct, setStoreProduct] = useState([])
     const itemCount = getItemCount()
     const [dropState, setDropState] = useState(false)
     const handleClick = () => {
       setDropState(!dropState)
     }
+
+    useEffect(() => {
+     const productStore = fetchProduct()
+     setStoreProduct(productStore)
+    }, [fetchProduct])
+
+     const handleExport = () => {
+      console.log(products)
+      exportToExcel(products, 'Timchem-Invoices');
+    };
+
+
     
 
 
@@ -42,6 +58,10 @@
               </span>
             )}
           </Link>
+
+            <div>
+              <button onClick={handleExport}>Export stock to Excel</button>
+            </div>
 
           <div className="relative group">
             <button className="flex items-center space-x-1 p-2 rounded-full hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-slate-500">

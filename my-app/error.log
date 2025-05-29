@@ -54,3 +54,4 @@
 {"level":"error","message":"500 - Validation failed: category: `bitters` is not a valid enum value for path `category`. - /api/products/68355647b50f3220f3da10bd - PUT - ::1","timestamp":"2025-05-27T06:07:22.450Z"}
 {"level":"error","message":"MongoDB connection error:","timestamp":"2025-05-27T07:25:23.992Z"}
 {"level":"error","message":"MongoDB connection error:","timestamp":"2025-05-27T07:28:43.368Z"}
+{"level":"error","message":"500 - Cast to ObjectId failed for value \"sales\" (type string) at path \"_id\" for model \"Order\" - /api/orders/sales - GET - ::1","timestamp":"2025-05-29T09:51:12.991Z"}

@@ -18,7 +18,7 @@ import { useMemo } from "react";
 
 const Cart = () => {
   const navigate = useNavigate();
-  const { items, clearCart, fetch, paymentCategory, checkout, getTotal } =
+  const { items, clearCart, fetch, error, paymentCategory, checkout, getTotal } =
     useCartStore();
     // const {user} = useAuthStore()
   const [isCheckingOut, setIsCheckingOut] = useState(false);
@@ -26,6 +26,7 @@ const Cart = () => {
   const [checkoutComplete, setCheckoutComplete] = useState(false);
 
   const total = useMemo(() => getTotal(), [items]);
+  // console.log(items)
  
 
   useEffect(() => {
@@ -35,27 +36,30 @@ const Cart = () => {
 
   
 
-
 const handleCheckout = async () => {
   setIsCheckingOut(true);
   toast.info("Processing your checkout...");
 
   try {
-    setTimeout(() => {
-      checkout(paymentMethod);
-      clearCart();
-      fetch()
-      setIsCheckingOut(false);
-      setCheckoutComplete(true);
-      toast.success("Checkout completed successfully!");
-      navigate("/order");
-    }, 2000);
+    const response = await checkout(paymentMethod);
+
+    // Assume response has a success flag or error info
+    if (response.error) {
+      throw new Error(response.error);
+    }
+
+    setCheckoutComplete(true);
+    toast.success("Checkout completed successfully!");
+    navigate("/order");
   } catch (error) {
     console.error("Checkout error:", error);
+    toast.error(error.message || "Checkout failed. Please try again.");
+  } finally {
     setIsCheckingOut(false);
-    toast.error("There was an error during checkout. Please try again.");
   }
 };
+
+
 
 const handleCart = () => {
    clearCart();
@@ -109,6 +113,7 @@ const handleCart = () => {
               <h2 className="text-lg font-semibold mb-4">Cart Items</h2>
 
               <div className="divide-y divide-slate-700">
+                
                 {Array.isArray(items) &&
                   items.map((item) => <CartItem key={item.id} item={item} />)}
               </div>

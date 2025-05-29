@@ -3,6 +3,64 @@ const Cart = require("../models/Cart")
 const Product = require("../models/Product")
 const { validationResult } = require("express-validator")
 
+
+
+
+
+// @desc   Get today's completed sales
+// @route  POST /api/orders/sales
+// @access Private
+exports.getTodaySales = async (req, res) => {
+  try {
+    // Start and end of today
+ const startOfRange = new Date();
+startOfRange.setMonth(startOfRange.getMonth() - 6);
+startOfRange.setHours(0, 0, 0, 0); // Start of that day 6 months ago
+
+const endOfRange = new Date();
+endOfRange.setHours(23, 59, 59, 999); // End of today
+
+    // Find today's completed orders for this user
+    const todaysOrders = await Order.find({
+      createdAt: { $gte: startOfRange, $lte: endOfRange },
+      // status: "completed",
+      user: req.user.id,
+    });
+    console.log(todaysOrders)
+
+    // Calculate total revenue and total items sold
+    const totalRevenue = todaysOrders.reduce((sum, order) => sum + order.total, 0);
+    const totalItemsSold = todaysOrders.reduce(
+      (sum, order) =>
+        sum + order.items.reduce((itemSum, item) => itemSum + item.quantity, 0),
+      0
+    );
+        // console.log(totalRevenue, totalItemsSold)
+
+    // console.log({
+    //   data: {
+    //     totalRevenue,
+    //     totalItemsSold,
+    //     orderCount: todaysOrders.length,
+    //     orders: todaysOrders,
+    //   },
+    // })
+    res.status(200).json({
+      success: true,
+      
+        totalRevenue,
+        totalItemsSold,
+        orderCount: todaysOrders.length,
+        orders: todaysOrders,
+     
+    });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ success: false, message: "Server Error" });
+  }
+};
+
+
 // @desc    Create new order (checkout)
 // @route   POST /api/orders/checkout
 // @access  Private
@@ -34,12 +92,14 @@ exports.checkout = async (req, res, next) => {
     for (const item of cart.items) {
       const product = await Product.findById(item.product)
 
+
       if (!product) {
         return res.status(404).json({
           success: false,
           message: `Product ${item.product} not found`,
         })
       }
+   
 
       if (product.stock < item.quantity) {
         return res.status(400).json({
@@ -55,6 +115,7 @@ exports.checkout = async (req, res, next) => {
       name: item.product.name,
       quantity: item.quantity,
       price: item.price,
+
     }))
 
     // Create order
@@ -62,18 +123,20 @@ exports.checkout = async (req, res, next) => {
       user: req.user.id,
       items: orderItems,
       total: cart.total,
+      status: "completed",
       paymentMethod,
     })
 
     // Update product stock
-    // for (const item of cart.items) {
-    //   await Product.findByIdAndUpdate(item.product._id, {
-    //     $inc: { stock: -item.quantity },
-    //   })
-    // }
+    for (const item of cart.items) {
+      await Product.findByIdAndUpdate(item.product._id, {
+        $inc: { stock: -item.quantity },
+      })
+    }
 
     // Clear the cart
     await Cart.findByIdAndDelete(cart._id)
+    await Cart.deleteMany({})
 
     res.status(201).json({
       success: true,

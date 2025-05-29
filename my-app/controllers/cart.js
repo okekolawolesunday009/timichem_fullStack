@@ -17,6 +17,7 @@ exports.addToCart = async (req, res, next) => {
 
     const { productId, quantity } = req.body
     // console.log(req.user)
+    console.log( productId, quantity );
 
 
     // Check if product exists
@@ -77,12 +78,13 @@ exports.addToCart = async (req, res, next) => {
     await cart.save()
 
     // Update product stock
-    await Product.findByIdAndUpdate(productId, {
-      $inc: { stock: -quantity }, // Decrease stock
-    })
+    // await Product.findByIdAndUpdate(productId, {
+    //   $inc: { stock: -quantity }, // Decrease stock
+    // })
 
     // Populate product details
     await cart.populate("items.product")
+    console.log(cart)
 
     res.status(200).json({
       success: true,
@@ -152,9 +154,9 @@ exports.removeFromCart = async (req, res, next) => {
     const item = cart.items[itemIndex];
 
     // Update product stock
-    await Product.findByIdAndUpdate(productId, {
-      $inc: { stock: item.quantity },
-    });
+    // await Product.findByIdAndUpdate(productId, {
+    //   $inc: { stock: item.quantity },
+    // });
 
     // Remove item from cart
     cart.items.splice(itemIndex, 1);

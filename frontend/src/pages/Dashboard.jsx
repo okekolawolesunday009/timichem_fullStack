@@ -1,10 +1,12 @@
-"use client"
+"use client";
 
-import { useState, useEffect } from "react"
-import { useAuthStore } from "../stores/authStore"
-import { useProductStore } from "../stores/productStore"
-import { formatCurrency } from "../utils/barcodeUtils"
-import StatsCard from "../components/StatsCard"
+import { useState, useEffect } from "react";
+import { useAuthStore } from "../stores/authStore";
+import { useProductStore } from "../stores/productStore";
+import { useCartStore } from "../stores/cartStore";
+import { formatCurrency } from "../utils/barcodeUtils";
+import StatsCard from "../components/StatsCard";
+
 import {
   BarChart,
   Bar,
@@ -17,58 +19,98 @@ import {
   Pie,
   Cell,
   Legend,
-} from "recharts"
-import { Package, DollarSign, AlertTriangle, TrendingUp } from "lucide-react"
+} from "recharts";
+
+import {
+  Package,
+  DollarSign,
+  AlertTriangle,
+  TrendingUp,
+} from "lucide-react";
+
+const COLORS = ["#3b82f6", "#10b981", "#f59e0b", "#ef4444", "#8b5cf6"];
 
 const Dashboard = () => {
-  const { user, isAdmin } = useAuthStore()
-  const { products } = useProductStore()
-  const [salesData, setSalesData] = useState([])
-  const [categoryData, setCategoryData] = useState([])
+  const { user, isAdmin } = useAuthStore();
+  const { products } = useProductStore();
+  const { getSales } = useCartStore();
+
+  const [salesData, setSalesData] = useState([]);
+  const [categoryData, setCategoryData] = useState([]);
+  const [recentSales, setRecentSales] = useState([]);
 
   // Calculate dashboard stats
-  const totalProducts = products.length
-  const totalValue = products.reduce((sum, product) => sum + product.price * product.stock, 0)
-  const lowStockItems = products.filter((product) => product.stock <= 5).length
+  const totalProducts = products.length;
+  const totalValue = products.reduce(
+    (sum, product) => sum + product.price * product.stock,
+    0
+  );
+  const lowStockItems = products.filter((product) => product.stock <= 5);
 
-  // Generate mock sales data
+  // Category data for pie chart
   useEffect(() => {
-    // Mock sales data for the last 7 days
-    const mockSalesData = []
-    const now = new Date()
-
-    for (let i = 6; i >= 0; i--) {
-      const date = new Date(now)
-      date.setDate(date.getDate() - i)
-
-      mockSalesData.push({
-        date: date.toLocaleDateString("en-US", { weekday: "short" }),
-        sales: "",
-      })
-    }
-
-    setSalesData(mockSalesData)
-
-    // Generate category data
-    const categories = {}
+    const categories = {};
     products.forEach((product) => {
-      if (categories[product.category]) {
-        categories[product.category] += product.stock
-      } else {
-        categories[product.category] = product.stock
+      categories[product.category] = (categories[product.category] || 0) + product.stock;
+    });
+
+    const data = Object.entries(categories).map(([name, value]) => ({ name, value }));
+    setCategoryData(data);
+  }, [products]);
+
+  // Fetch sales and transform data
+  useEffect(() => {
+    const fetchSales = async () => {
+      try {
+        const rawSales = await getSales();
+        const sixMonthStart = new Date();
+        sixMonthStart.setMonth(sixMonthStart.getMonth() - 6);
+        sixMonthStart.setHours(0, 0, 0, 0);
+
+        const sixMonthEnd = new Date();
+        sixMonthEnd.setHours(23, 59, 59, 999);
+
+        const filteredSales = rawSales.orders.filter((sale) => {
+          const saleDate = new Date(sale.createdAt);
+          return saleDate >= sixMonthStart && saleDate <= sixMonthEnd;
+        });
+
+        const salesMap = {};
+        filteredSales.forEach((sale) => {
+          const dateKey = new Date(sale.createdAt).toISOString().split("T")[0];
+          salesMap[dateKey] = (salesMap[dateKey] || 0) + sale.total;
+        });
+
+        const dailySales = Object.entries(salesMap)
+          .map(([date, sales]) => ({ date, sales }))
+          .sort((a, b) => new Date(a.date) - new Date(b.date));
+
+        setRecentSales(dailySales);
+
+        // Create salesData for last 7 days
+        const salesByDay = [];
+        const now = new Date();
+
+        for (let i = 6; i >= 0; i--) {
+          const day = new Date(now);
+          day.setDate(now.getDate() - i);
+          const dateKey = day.toISOString().split("T")[0];
+          const dayName = day.toLocaleDateString("en-US", { weekday: "short" });
+          salesByDay.push({
+            date: dayName,
+            sales: salesMap[dateKey] || 0,
+          });
+        }
+
+        setSalesData(salesByDay);
+        console.log(salesData)
+      } catch (error) {
+        console.error("Error fetching sales:", error);
       }
-    })
+    };
 
-    const categoryDataArray = Object.keys(categories).map((category) => ({
-      name: category,
-      value: categories[category],
-    }))
-
-    setCategoryData(categoryDataArray)
-  }, [products])
-
-  // Colors for pie chart
-  const COLORS = ["#3b82f6", "#10b981", "#f59e0b", "#ef4444", "#8b5cf6"]
+    fetchSales();
+  }, [getSales]);
 
   return (
     <div className="fade-in">
@@ -79,6 +121,7 @@ const Dashboard = () => {
         </div>
       </div>
 
+      {/* Stats Cards */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
         <StatsCard
           title="Total Products"
@@ -94,7 +137,7 @@ const Dashboard = () => {
         />
         <StatsCard
           title="Low Stock Items"
-          value={lowStockItems}
+          value={lowStockItems.length}
           icon={<AlertTriangle size={24} />}
           color="bg-amber-900/50 text-amber-400"
         />
@@ -106,6 +149,7 @@ const Dashboard = () => {
         />
       </div>
 
+      {/* Sales Chart + Category Pie */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         <div className="lg:col-span-2 card">
           <h2 className="text-lg font-semibold mb-4">Sales Last 7 Days</h2>
@@ -141,10 +185,15 @@ const Dashboard = () => {
                   outerRadius={80}
                   fill="#8884d8"
                   dataKey="value"
-                  label={({ name, percent }) => `${name} ${(percent * 100).toFixed(0)}%`}
+                  label={({ name, percent }) =>
+                    `${name} ${(percent * 100).toFixed(0)}%`
+                  }
                 >
                   {categoryData.map((entry, index) => (
-                    <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+                    <Cell
+                      key={`cell-${index}`}
+                      fill={COLORS[index % COLORS.length]}
+                    />
                   ))}
                 </Pie>
                 <Legend />
@@ -162,6 +211,7 @@ const Dashboard = () => {
         </div>
       </div>
 
+      {/* Low Stock Table */}
       {isAdmin() && (
         <div className="mt-8 card">
           <h2 className="text-lg font-semibold mb-4">Low Stock Alert</h2>
@@ -176,9 +226,8 @@ const Dashboard = () => {
                 </tr>
               </thead>
               <tbody>
-                {products
-                  .filter((product) => product.stock <= 5)
-                  .map((product) => (
+                {lowStockItems.length > 0 ? (
+                  lowStockItems.map((product) => (
                     <tr key={product.id} className="border-b border-slate-800">
                       <td className="py-3">{product.name}</td>
                       <td className="py-3">{product.category}</td>
@@ -186,15 +235,17 @@ const Dashboard = () => {
                       <td className="py-3">
                         <span
                           className={`px-2 py-1 rounded text-xs font-medium ${
-                            product.stock === 0 ? "bg-red-900 text-red-300" : "bg-amber-900 text-amber-300"
+                            product.stock === 0
+                              ? "bg-red-900 text-red-300"
+                              : "bg-amber-900 text-amber-300"
                           }`}
                         >
                           {product.stock === 0 ? "Out of stock" : `${product.stock} left`}
                         </span>
                       </td>
                     </tr>
-                  ))}
-                {products.filter((product) => product.stock <= 5).length === 0 && (
+                  ))
+                ) : (
                   <tr>
                     <td colSpan="4" className="py-4 text-center text-slate-400">
                       No low stock items
@@ -207,8 +258,7 @@ const Dashboard = () => {
         </div>
       )}
     </div>
-  )
-}
+  );
+};
 
-export default Dashboard
-
+export default Dashboard;
