@@ -33,6 +33,34 @@ const ProductSchema = new mongoose.Schema({
     required: [true, "Please add stock quantity"],
     min: [0, "Stock cannot be negative"],
   },
+   stockHistory: [
+    {
+      quantityAdded: {
+        type: Number,
+        required: true,
+      },
+      previousStock: {
+        type: Number,
+        required: true,
+      },
+      newStock: {
+        type: Number,
+        required: true,
+      },
+      addedBy: {
+      type: String,
+      default: "user in", // or "admin", or any default username
+    },
+    note: {
+      type: String,
+      default: "Stock update", // generic note
+    },
+      timestamp: {
+        type: Date,
+        default: Date.now,
+      },
+    }
+  ],
   image: {
     type: String,
     default: "no-image.jpg",

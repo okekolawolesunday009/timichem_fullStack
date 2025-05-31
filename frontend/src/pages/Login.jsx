@@ -103,7 +103,11 @@ const Login = () => {
               User: username: <span className="text-slate-300">user</span> / password:{" "}
               <span className="text-slate-300">user123</span>
             </p>
+<<<<<<< HEAD
           </div> */}
+=======
+          </div>
+>>>>>>> c3ceaa1ad1a3dc361c279dad4d50a9aa72da2496
         </div>
       </div>
     </div>

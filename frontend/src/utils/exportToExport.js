@@ -4,8 +4,8 @@ import { saveAs } from 'file-saver';
 const exportToExcel = (data, fileName = 'TimchemData') => {
   const worksheet = XLSX.utils.json_to_sheet(data);
   const workbook = XLSX.utils.book_new();
-  const day = new Date().getDay()
-  const month = new Date().getMonth()
+  const day = new Date().getDate()
+  const month = new Date().getMonth() +  1 
   const year = new Date().getFullYear()
   XLSX.utils.book_append_sheet(workbook, worksheet, 'Sheet1');
 

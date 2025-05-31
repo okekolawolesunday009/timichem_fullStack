@@ -4,46 +4,6 @@ const bwipjs = require("bwip-js");
 const fs = require("fs");
 const path = require("path");
 
-// @desc    Create new product
-// @route   POST /api/products
-// @access  Private/Admin
-exports.createProduct = async (req, res, next) => {
-  try {
-    const errors = validationResult(req);
-    if (!errors.isEmpty()) {
-      return res.status(400).json({
-        success: false,
-        errors: errors.array(),
-      });
-    }
-    const {
-      name,
-      description,
-      price,
-      barcode,
-      category,
-      stock,
-
-      image,
-    } = req.body;
-    const product = await Product.create({
-      name,
-      description,
-      price,
-      barcode,
-      category,
-      stock,
-      image,
-    });
-
-    res.status(201).json({
-      success: true,
-     product,
-    });
-  } catch (error) {
-    next(error);
-  }
-};
 
 // @desc    Get all products
 // @route   GET /api/products
@@ -127,9 +87,56 @@ exports.getProduct = async (req, res, next) => {
   }
 };
 
+<<<<<<< HEAD
 // @desc    Update product
 // @route   PUT /api/products/:id
 // @access  Private/Admin
+=======
+// @desc    Create new product
+// @route   POST /api/products
+// @access  Private/Admin
+exports.createProduct = async (req, res, next) => {
+  try {
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+      return res.status(400).json({
+        success: false,
+        errors: errors.array(),
+      });
+    }
+    const {
+      name,
+      description,
+      price,
+      barcode,
+      category,
+      stock,
+
+      image,
+    } = req.body;
+    const product = await Product.create({
+      name,
+      description,
+      price,
+      barcode,
+      category,
+      stock,
+      image,
+    });
+
+    res.status(201).json({
+      success: true,
+     product,
+    });
+  } catch (error) {
+    next(error);
+  }
+};
+
+// @desc    Get all products
+// @route   GET /api/products
+// @access  Private
+>>>>>>> c3ceaa1ad1a3dc361c279dad4d50a9aa72da2496
 exports.updateProduct = async (req, res, next) => {
   try {
     const errors = validationResult(req);
@@ -149,6 +156,7 @@ exports.updateProduct = async (req, res, next) => {
       });
     }
 
+<<<<<<< HEAD
     product = await Product.findByIdAndUpdate(req.params.id, req.body, {
       new: true,
       runValidators: true,
@@ -157,6 +165,41 @@ exports.updateProduct = async (req, res, next) => {
     res.status(200).json({
       success: true,
      product,
+=======
+    const { name, description, price, barcode, category, stock, image } = req.body;
+
+    const previousStock = product.stock;
+    const quantityAdded = Number(stock); // ensure it's a number
+    const newStock = previousStock + quantityAdded;
+
+    // Update stock value
+    product.stock = newStock;
+
+    // Push stock history entry
+    product.stockHistory.push({
+      quantityAdded,
+      previousStock,
+      newStock,
+      note:  "Stock updated",
+      addedBy: req.user?.name || "system",
+    });
+
+    // Update other fields
+    product.name = name;
+    product.description = description;
+    product.price = price;
+    product.barcode = barcode;
+    product.category = category;
+    product.image = image;
+
+    // Save the updated product
+    await product.save();
+
+
+    res.status(200).json({
+      success: true,
+      product,
+>>>>>>> c3ceaa1ad1a3dc361c279dad4d50a9aa72da2496
     });
   } catch (error) {
     next(error);

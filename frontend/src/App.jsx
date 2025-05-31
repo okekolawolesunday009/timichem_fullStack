@@ -37,10 +37,17 @@ function App() {
           path="/login"
           element={!isAuthenticated ? <Login /> : <Navigate to="/dashboard" />}
         />
+<<<<<<< HEAD
         <Route
           path="/signup"
           // element={!isAuthenticated ? <Signup /> : <Navigate to="/dashboard" />}
         />
+=======
+        {/* <Route
+          path="/signup"
+          element={!isAuthenticated ? <Signup /> : <Navigate to="/dashboard" />}
+        /> */}
+>>>>>>> c3ceaa1ad1a3dc361c279dad4d50a9aa72da2496
 
         <Route element={<ProtectedRoute />}>
           <Route element={<Layout />}>

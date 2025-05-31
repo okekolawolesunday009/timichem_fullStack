@@ -13,6 +13,8 @@ const AddProduct = () => {
   const { addProduct, categories, product, fetchProductById, updateProduct, isLoading } =
     useProductStore();
 
+    const [updateStock, setUpdateStock ] = useState("")
+
   useEffect(() => {
     const getProduct = async () => {
       if (id) {
@@ -30,7 +32,7 @@ const AddProduct = () => {
         price: product.price || "",
         barcode: product.barcode || "",
         category: product.category || "",
-        stock: product.stock || "",
+        stock: (product.stock + updateStock) || "",
         image: product.image || "/placeholder.svg?height=200&width=200",
       });
     }
@@ -104,7 +106,9 @@ const AddProduct = () => {
       const productData = {
         ...formData,
         price: Number.parseFloat(formData.price),
-        stock: Number.parseInt(formData.stock),
+       stock: id
+        ? Number.parseInt(product.stock || 0) + Number.parseInt(updateStock || 0)
+        : Number.parseInt(formData.stock),
       };
       const { name, description, price, barcode, category, stock, image } =
         productData;
@@ -254,26 +258,48 @@ const AddProduct = () => {
               )}
             </div>
 
-            <div>
-              <label
-                htmlFor="stock"
-                className="block text-sm font-medium text-slate-300 mb-1"
-              >
-                Stock Quantity*
-              </label>
-              <input
-                id="stock"
-                name="stock"
-                type="number"
-                value={formData.stock}
-                onChange={handleChange}
-                className={`input ${errors.stock ? "border-red-500" : ""}`}
-                placeholder="Enter quantity"
-              />
-              {errors.stock && (
-                <p className="mt-1 text-sm text-red-400">{errors.stock}</p>
-              )}
-            </div>
+           {/* Show current stock (disabled) */}
+{id && (
+  <div>
+    <label
+      htmlFor="currentStock"
+      className="block text-sm font-medium text-slate-300 mb-1"
+    >
+      Current Quantity*
+    </label>
+    <input
+      id="currentStock"
+      type="number"
+      disabled
+      value={formData.stock}
+      className="input"
+      placeholder="Current stock"
+    />
+  </div>
+)}
+
+{/* Input for new stock to add */}
+<div>
+  <label
+    htmlFor="updateStock"
+    className="block text-sm font-medium text-slate-300 mb-1"
+  >
+    {id ? "Add Quantity*" : "Stock Quantity*"}
+  </label>
+  <input
+    id="updateStock"
+    name="updateStock"
+    type="number"
+    value={updateStock}
+    onChange={(e) => setUpdateStock(e.target.value)}
+    className={`input ${errors.stock ? "border-red-500" : ""}`}
+    placeholder="Enter quantity"
+  />
+  {errors.stock && (
+    <p className="mt-1 text-sm text-red-400">{errors.stock}</p>
+  )}
+</div>
+
 
             <div>
               <label
