@@ -85,14 +85,14 @@ const Login = () => {
           </button>
         </form>
 
-        <div className="mt-6 text-center text-sm">
-          {/* <p className="text-slate-400">
+        {/* <div className="mt-6 text-center text-sm">
+          <p className="text-slate-400">
             Don't have an account?{" "}
             <Link to="/signup" className="text-blue-400 hover:text-blue-300">
               Sign up
             </Link>
-          </p> */}
-{/* 
+          </p> 
+
           <div className="mt-4 text-slate-500">
             <p>Demo accounts:</p>
             <p>
@@ -104,7 +104,7 @@ const Login = () => {
               <span className="text-slate-300">user123</span>
             </p>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   )
