@@ -1,0 +1,57 @@
+{"level":"error","message":"500 - Product validation failed: category: `Whiskey` is not a valid enum value for path `category`. - /api/products - POST - ::1","timestamp":"2025-03-06T01:22:31.144Z"}
+{"level":"error","message":"500 - Product validation failed: category: `Wine` is not a valid enum value for path `category`. - /api/products - POST - ::1","timestamp":"2025-03-06T01:23:12.104Z"}
+{"level":"error","message":"400 - Expected double-quoted property name in JSON at position 225 (line 14 column 1) - /api/carts/add - POST - ::1","timestamp":"2025-03-06T01:32:33.019Z"}
+{"level":"error","message":"500 - E11000 duplicate key error collection: hotel-bar-inventory.products index: barcode_1 dup key: { barcode: \"1234567890123\" } - /api/products - POST - ::1","timestamp":"2025-03-06T01:49:46.663Z"}
+{"level":"error","message":"500 - role is not defined - /api/auth/register - POST - ::1","timestamp":"2025-05-17T15:34:24.266Z"}
+{"level":"error","message":"400 - Expected double-quoted property name in JSON at position 103 (line 6 column 1) - /api/auth/register - POST - ::1","timestamp":"2025-05-17T15:34:37.099Z"}
+{"level":"error","message":"500 - role is not defined - /api/auth/register - POST - ::1","timestamp":"2025-05-17T15:34:49.137Z"}
+{"level":"error","message":"500 - role is not defined - /api/auth/register - POST - ::1","timestamp":"2025-05-17T15:35:05.835Z"}
+{"level":"error","message":"500 - role is not defined - /api/auth/register - POST - ::1","timestamp":"2025-05-17T15:35:44.844Z"}
+{"level":"error","message":"500 - role is not defined - /api/auth/register - POST - ::1","timestamp":"2025-05-17T15:36:13.016Z"}
+{"level":"error","message":"500 - role is not defined - /api/auth/register - POST - ::1","timestamp":"2025-05-17T15:37:55.066Z"}
+{"level":"error","message":"500 - User validation failed: name: Please add a name - /api/auth/register - POST - ::1","timestamp":"2025-05-17T15:55:41.213Z"}
+{"level":"error","message":"500 - User validation failed: name: Please add a name - /api/auth/register - POST - ::1","timestamp":"2025-05-17T16:01:28.770Z"}
+{"level":"error","message":"500 - User validation failed: name: Please add a name - /api/auth/register - POST - ::1","timestamp":"2025-05-17T16:02:33.826Z"}
+{"level":"error","message":"500 - User validation failed: name: Please add a name - /api/auth/register - POST - ::1","timestamp":"2025-05-17T16:02:41.863Z"}
+{"level":"error","message":"500 - Cast to ObjectId failed for value \"8\" (type number) at path \"_id\" for model \"Product\" - /api/cart/add - POST - ::1","timestamp":"2025-05-17T21:17:31.200Z"}
+{"level":"error","message":"500 - Cast to ObjectId failed for value \"1\" (type number) at path \"_id\" for model \"Product\" - /api/cart/add - POST - ::1","timestamp":"2025-05-17T21:18:45.805Z"}
+{"level":"error","message":"500 - Cast to ObjectId failed for value \"6\" (type number) at path \"_id\" for model \"Product\" - /api/cart/add - POST - ::1","timestamp":"2025-05-17T21:18:52.240Z"}
+{"level":"error","message":"500 - Cast to ObjectId failed for value \"8\" (type number) at path \"_id\" for model \"Product\" - /api/cart/add - POST - ::1","timestamp":"2025-05-17T21:21:23.897Z"}
+{"level":"error","message":"500 - Cast to ObjectId failed for value \"5\" (type number) at path \"_id\" for model \"Product\" - /api/cart/add - POST - ::1","timestamp":"2025-05-17T21:21:57.649Z"}
+{"level":"error","message":"500 - Cast to ObjectId failed for value \"8\" (type number) at path \"_id\" for model \"Product\" - /api/cart/add - POST - ::1","timestamp":"2025-05-17T21:27:38.112Z"}
+{"level":"error","message":"500 - Cast to ObjectId failed for value \"5\" (type number) at path \"_id\" for model \"Product\" - /api/cart/add - POST - ::1","timestamp":"2025-05-17T21:27:57.558Z"}
+{"level":"error","message":"500 - Cast to ObjectId failed for value \"1\" (type string) at path \"_id\" for model \"Product\" - /api/cart/add - POST - ::1","timestamp":"2025-05-17T21:31:57.033Z"}
+{"level":"error","message":"500 - Cast to ObjectId failed for value \"3\" (type number) at path \"_id\" for model \"Product\" - /api/cart/add - POST - ::1","timestamp":"2025-05-17T21:47:18.145Z"}
+{"level":"error","message":"500 - First argument to `Model` constructor must be an object, **not** a string. Make sure you're calling `mongoose.model()`, not `mongoose.Model()`. - /api/products - POST - ::1","timestamp":"2025-05-17T22:09:36.379Z"}
+{"level":"error","message":"500 - First argument to `Model` constructor must be an object, **not** a string. Make sure you're calling `mongoose.model()`, not `mongoose.Model()`. - /api/products - POST - ::1","timestamp":"2025-05-17T22:18:36.849Z"}
+{"level":"error","message":"500 - First argument to `Model` constructor must be an object, **not** a string. Make sure you're calling `mongoose.model()`, not `mongoose.Model()`. - /api/products - POST - ::1","timestamp":"2025-05-17T22:21:19.865Z"}
+{"level":"error","message":"500 - First argument to `Model` constructor must be an object, **not** a string. Make sure you're calling `mongoose.model()`, not `mongoose.Model()`. - /api/products - POST - ::1","timestamp":"2025-05-17T22:26:46.553Z"}
+{"level":"error","message":"500 - Product validation failed: category: `Spirits` is not a valid enum value for path `category`. - /api/products - POST - ::1","timestamp":"2025-05-17T22:27:18.713Z"}
+{"level":"error","message":"500 - Product validation failed: category: `Beer` is not a valid enum value for path `category`. - /api/products - POST - ::1","timestamp":"2025-05-17T22:28:11.503Z"}
+{"level":"error","message":"500 - Cast to ObjectId failed for value \"coke\" (type string) at path \"_id\" for model \"Product\" - /api/products/coke - PUT - ::1","timestamp":"2025-05-18T12:06:34.060Z"}
+{"level":"error","message":"500 - Cast to ObjectId failed for value \"Budwiser\" (type string) at path \"_id\" for model \"Product\" - /api/products/Budwiser - PUT - ::1","timestamp":"2025-05-18T12:08:16.537Z"}
+{"level":"error","message":"500 - item is not defined - /api/cart/6829745214c10fc1aa92fb7e - DELETE - ::1","timestamp":"2025-05-18T17:11:46.154Z"}
+{"level":"error","message":"MongoDB connection error:","timestamp":"2025-05-23T18:48:53.808Z"}
+{"level":"error","message":"MongoDB connection error:","timestamp":"2025-05-23T18:50:38.345Z"}
+{"level":"error","message":"MongoDB connection error:","timestamp":"2025-05-23T18:52:10.580Z"}
+{"level":"error","message":"500 - Validation failed: category: `milk` is not a valid enum value for path `category`. - /api/products/683488b9fcceeaee3d28c2c9 - PUT - ::1","timestamp":"2025-05-26T19:22:24.315Z"}
+{"level":"error","message":"500 - Validation failed: category: `bitters` is not a valid enum value for path `category`. - /api/products/683488b9fcceeaee3d28c2df - PUT - ::1","timestamp":"2025-05-26T19:29:02.104Z"}
+{"level":"error","message":"500 - Validation failed: category: `bitters` is not a valid enum value for path `category`. - /api/products/683488b9fcceeaee3d28c2f3 - PUT - ::1","timestamp":"2025-05-26T19:29:25.943Z"}
+{"level":"error","message":"500 - Validation failed: category: `bitters` is not a valid enum value for path `category`. - /api/products/683488b9fcceeaee3d28c2cb - PUT - ::1","timestamp":"2025-05-26T19:30:12.620Z"}
+{"level":"error","message":"500 - Validation failed: category: `milk` is not a valid enum value for path `category`. - /api/products/683488b9fcceeaee3d28c2c9 - PUT - ::1","timestamp":"2025-05-26T19:32:10.822Z"}
+{"level":"error","message":"500 - Validation failed: category: `bitters` is not a valid enum value for path `category`. - /api/products/683488b9fcceeaee3d28c2cb - PUT - ::1","timestamp":"2025-05-26T19:32:56.882Z"}
+{"level":"error","message":"500 - Validation failed: category: `bitters` is not a valid enum value for path `category`. - /api/products/683488b9fcceeaee3d28c2cb - PUT - ::1","timestamp":"2025-05-26T19:33:07.699Z"}
+{"level":"error","message":"500 - Validation failed: category: `bitters` is not a valid enum value for path `category`. - /api/products/683488b9fcceeaee3d28c2cb - PUT - ::1","timestamp":"2025-05-26T19:33:07.971Z"}
+{"level":"error","message":"500 - Validation failed: category: `bitters` is not a valid enum value for path `category`. - /api/products/683488b9fcceeaee3d28c2df - PUT - ::1","timestamp":"2025-05-26T19:33:40.445Z"}
+{"level":"error","message":"500 - Validation failed: category: `others` is not a valid enum value for path `category`. - /api/products/6834c33bb46c1973a5791b32 - PUT - ::1","timestamp":"2025-05-26T19:38:55.507Z"}
+{"level":"error","message":"500 - Validation failed: category: `milk` is not a valid enum value for path `category`. - /api/products/6834c33bb46c1973a5791b0b - PUT - ::1","timestamp":"2025-05-26T19:39:13.274Z"}
+{"level":"error","message":"500 - Validation failed: category: `bitters` is not a valid enum value for path `category`. - /api/products/6834c33bb46c1973a5791b0d - PUT - ::1","timestamp":"2025-05-27T05:17:59.743Z"}
+{"level":"error","message":"500 - Validation failed: category: `soda` is not a valid enum value for path `category`. - /api/products/6834c33bb46c1973a5791b1c - PUT - ::1","timestamp":"2025-05-27T05:23:17.822Z"}
+{"level":"error","message":"500 - Validation failed: category: `bitters` is not a valid enum value for path `category`. - /api/products/6834c33bb46c1973a5791b11 - PUT - ::1","timestamp":"2025-05-27T06:04:57.269Z"}
+{"level":"error","message":"500 - Validation failed: category: `bitters` is not a valid enum value for path `category`. - /api/products/6834c33bb46c1973a5791b34 - PUT - ::1","timestamp":"2025-05-27T06:05:06.799Z"}
+{"level":"error","message":"500 - Validation failed: category: `bitters` is not a valid enum value for path `category`. - /api/products/6834c33bb46c1973a5791b40 - PUT - ::1","timestamp":"2025-05-27T06:05:14.443Z"}
+{"level":"error","message":"500 - Validation failed: category: `bitters` is not a valid enum value for path `category`. - /api/products/68355647b50f3220f3da10ba - PUT - ::1","timestamp":"2025-05-27T06:06:19.229Z"}
+{"level":"error","message":"500 - Validation failed: category: `bitters` is not a valid enum value for path `category`. - /api/products/68355647b50f3220f3da10bd - PUT - ::1","timestamp":"2025-05-27T06:07:22.450Z"}
+{"level":"error","message":"MongoDB connection error:","timestamp":"2025-05-27T07:25:23.992Z"}
+{"level":"error","message":"MongoDB connection error:","timestamp":"2025-05-27T07:28:43.368Z"}
+{"level":"error","message":"500 - Cast to ObjectId failed for value \"sales\" (type string) at path \"_id\" for model \"Order\" - /api/orders/sales - GET - ::1","timestamp":"2025-05-29T09:51:12.991Z"}

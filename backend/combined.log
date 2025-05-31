@@ -1,0 +1,287 @@
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-03-06T00:59:38.236Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-03-06T00:59:38.244Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-03-06T01:08:27.917Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-03-06T01:08:27.925Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-03-06T01:14:11.712Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-03-06T01:14:11.724Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-03-06T01:14:36.688Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-03-06T01:14:36.696Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-03-06T01:17:13.598Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-03-06T01:17:13.611Z"}
+{"level":"error","message":"500 - Product validation failed: category: `Whiskey` is not a valid enum value for path `category`. - /api/products - POST - ::1","timestamp":"2025-03-06T01:22:31.144Z"}
+{"level":"error","message":"500 - Product validation failed: category: `Wine` is not a valid enum value for path `category`. - /api/products - POST - ::1","timestamp":"2025-03-06T01:23:12.104Z"}
+{"level":"error","message":"400 - Expected double-quoted property name in JSON at position 225 (line 14 column 1) - /api/carts/add - POST - ::1","timestamp":"2025-03-06T01:32:33.019Z"}
+{"level":"error","message":"500 - E11000 duplicate key error collection: hotel-bar-inventory.products index: barcode_1 dup key: { barcode: \"1234567890123\" } - /api/products - POST - ::1","timestamp":"2025-03-06T01:49:46.663Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-03-06T01:54:15.593Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-03-06T01:54:15.600Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-17T05:27:51.920Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-17T05:27:51.933Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-17T08:13:10.315Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-17T08:13:10.323Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-17T08:15:47.449Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-17T08:15:47.458Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-17T08:31:15.434Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-17T08:31:15.442Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-17T15:33:39.426Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-17T15:33:39.435Z"}
+{"level":"error","message":"500 - role is not defined - /api/auth/register - POST - ::1","timestamp":"2025-05-17T15:34:24.266Z"}
+{"level":"error","message":"400 - Expected double-quoted property name in JSON at position 103 (line 6 column 1) - /api/auth/register - POST - ::1","timestamp":"2025-05-17T15:34:37.099Z"}
+{"level":"error","message":"500 - role is not defined - /api/auth/register - POST - ::1","timestamp":"2025-05-17T15:34:49.137Z"}
+{"level":"error","message":"500 - role is not defined - /api/auth/register - POST - ::1","timestamp":"2025-05-17T15:35:05.835Z"}
+{"level":"error","message":"500 - role is not defined - /api/auth/register - POST - ::1","timestamp":"2025-05-17T15:35:44.844Z"}
+{"level":"error","message":"500 - role is not defined - /api/auth/register - POST - ::1","timestamp":"2025-05-17T15:36:13.016Z"}
+{"level":"error","message":"500 - role is not defined - /api/auth/register - POST - ::1","timestamp":"2025-05-17T15:37:55.066Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-17T15:39:19.138Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-17T15:39:19.146Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-17T15:51:23.077Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-17T15:51:23.090Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-17T15:52:44.335Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-17T15:52:44.344Z"}
+{"level":"error","message":"500 - User validation failed: name: Please add a name - /api/auth/register - POST - ::1","timestamp":"2025-05-17T15:55:41.213Z"}
+{"level":"error","message":"500 - User validation failed: name: Please add a name - /api/auth/register - POST - ::1","timestamp":"2025-05-17T16:01:28.770Z"}
+{"level":"error","message":"500 - User validation failed: name: Please add a name - /api/auth/register - POST - ::1","timestamp":"2025-05-17T16:02:33.826Z"}
+{"level":"error","message":"500 - User validation failed: name: Please add a name - /api/auth/register - POST - ::1","timestamp":"2025-05-17T16:02:41.863Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-17T16:03:38.238Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-17T16:03:38.246Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-17T16:17:05.731Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-17T16:17:05.739Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-17T21:07:31.528Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-17T21:07:31.536Z"}
+{"level":"error","message":"500 - Cast to ObjectId failed for value \"8\" (type number) at path \"_id\" for model \"Product\" - /api/cart/add - POST - ::1","timestamp":"2025-05-17T21:17:31.200Z"}
+{"level":"error","message":"500 - Cast to ObjectId failed for value \"1\" (type number) at path \"_id\" for model \"Product\" - /api/cart/add - POST - ::1","timestamp":"2025-05-17T21:18:45.805Z"}
+{"level":"error","message":"500 - Cast to ObjectId failed for value \"6\" (type number) at path \"_id\" for model \"Product\" - /api/cart/add - POST - ::1","timestamp":"2025-05-17T21:18:52.240Z"}
+{"level":"error","message":"500 - Cast to ObjectId failed for value \"8\" (type number) at path \"_id\" for model \"Product\" - /api/cart/add - POST - ::1","timestamp":"2025-05-17T21:21:23.897Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-17T21:21:43.847Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-17T21:21:43.855Z"}
+{"level":"error","message":"500 - Cast to ObjectId failed for value \"5\" (type number) at path \"_id\" for model \"Product\" - /api/cart/add - POST - ::1","timestamp":"2025-05-17T21:21:57.649Z"}
+{"level":"error","message":"500 - Cast to ObjectId failed for value \"8\" (type number) at path \"_id\" for model \"Product\" - /api/cart/add - POST - ::1","timestamp":"2025-05-17T21:27:38.112Z"}
+{"level":"error","message":"500 - Cast to ObjectId failed for value \"5\" (type number) at path \"_id\" for model \"Product\" - /api/cart/add - POST - ::1","timestamp":"2025-05-17T21:27:57.558Z"}
+{"level":"error","message":"500 - Cast to ObjectId failed for value \"1\" (type string) at path \"_id\" for model \"Product\" - /api/cart/add - POST - ::1","timestamp":"2025-05-17T21:31:57.033Z"}
+{"level":"error","message":"500 - Cast to ObjectId failed for value \"3\" (type number) at path \"_id\" for model \"Product\" - /api/cart/add - POST - ::1","timestamp":"2025-05-17T21:47:18.145Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-17T21:59:54.946Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-17T21:59:54.954Z"}
+{"level":"error","message":"500 - First argument to `Model` constructor must be an object, **not** a string. Make sure you're calling `mongoose.model()`, not `mongoose.Model()`. - /api/products - POST - ::1","timestamp":"2025-05-17T22:09:36.379Z"}
+{"level":"error","message":"500 - First argument to `Model` constructor must be an object, **not** a string. Make sure you're calling `mongoose.model()`, not `mongoose.Model()`. - /api/products - POST - ::1","timestamp":"2025-05-17T22:18:36.849Z"}
+{"level":"error","message":"500 - First argument to `Model` constructor must be an object, **not** a string. Make sure you're calling `mongoose.model()`, not `mongoose.Model()`. - /api/products - POST - ::1","timestamp":"2025-05-17T22:21:19.865Z"}
+{"level":"error","message":"500 - First argument to `Model` constructor must be an object, **not** a string. Make sure you're calling `mongoose.model()`, not `mongoose.Model()`. - /api/products - POST - ::1","timestamp":"2025-05-17T22:26:46.553Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-17T22:26:54.697Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-17T22:26:54.705Z"}
+{"level":"error","message":"500 - Product validation failed: category: `Spirits` is not a valid enum value for path `category`. - /api/products - POST - ::1","timestamp":"2025-05-17T22:27:18.713Z"}
+{"level":"error","message":"500 - Product validation failed: category: `Beer` is not a valid enum value for path `category`. - /api/products - POST - ::1","timestamp":"2025-05-17T22:28:11.503Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-17T23:09:48.926Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-17T23:09:48.934Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-17T23:10:35.109Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-17T23:10:35.127Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-17T23:12:18.462Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-17T23:12:18.474Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-17T23:39:29.002Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-17T23:39:29.011Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-17T23:57:17.804Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-17T23:57:17.812Z"}
+{"level":"error","message":"500 - Cast to ObjectId failed for value \"coke\" (type string) at path \"_id\" for model \"Product\" - /api/products/coke - PUT - ::1","timestamp":"2025-05-18T12:06:34.060Z"}
+{"level":"error","message":"500 - Cast to ObjectId failed for value \"Budwiser\" (type string) at path \"_id\" for model \"Product\" - /api/products/Budwiser - PUT - ::1","timestamp":"2025-05-18T12:08:16.537Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-18T15:10:48.219Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-18T15:10:48.227Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-18T16:07:17.731Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-18T16:07:17.739Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-18T17:11:28.436Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-18T17:11:28.444Z"}
+{"level":"error","message":"500 - item is not defined - /api/cart/6829745214c10fc1aa92fb7e - DELETE - ::1","timestamp":"2025-05-18T17:11:46.154Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-18T17:13:16.317Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-18T17:13:16.326Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-23T17:42:43.123Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-23T17:42:43.131Z"}
+{"level":"error","message":"MongoDB connection error:","timestamp":"2025-05-23T18:48:53.808Z"}
+{"level":"error","message":"MongoDB connection error:","timestamp":"2025-05-23T18:50:38.345Z"}
+{"level":"error","message":"MongoDB connection error:","timestamp":"2025-05-23T18:52:10.580Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-23T18:56:08.721Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-23T18:56:08.729Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-23T19:31:44.383Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-23T19:31:44.391Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-24T02:31:16.905Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-24T02:31:16.921Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-24T02:34:10.200Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-24T02:34:10.208Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-24T02:36:38.866Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-24T02:36:38.883Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-24T05:43:32.226Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-24T05:43:32.235Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-24T07:17:09.149Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-24T07:17:09.157Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-24T07:20:34.662Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-24T07:20:34.669Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-24T09:47:31.788Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-24T09:47:31.796Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-24T11:40:44.180Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-24T11:40:44.187Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-24T11:46:40.673Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-24T11:46:40.680Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-24T11:47:16.183Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-24T11:47:16.191Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-24T11:49:24.377Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-24T11:49:24.385Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-24T11:49:44.957Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-24T11:49:44.968Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-24T11:51:33.403Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-24T11:51:33.412Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-24T11:52:25.162Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-24T11:52:25.170Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-24T11:52:48.248Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-24T11:52:48.261Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-24T12:00:18.030Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-24T12:00:18.038Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-24T12:10:25.187Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-24T12:10:25.194Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-24T12:38:20.254Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-24T12:38:20.263Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-24T12:45:12.808Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-24T12:45:12.817Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-24T12:47:11.145Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-24T12:47:11.153Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-24T12:47:59.463Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-24T12:47:59.472Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-24T12:55:38.827Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-24T12:55:38.834Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-24T12:57:04.010Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-24T12:57:04.023Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-24T12:59:20.831Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-24T12:59:20.839Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-24T13:01:32.433Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-24T13:01:32.445Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-24T17:58:48.586Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-24T17:58:48.600Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-26T14:18:42.507Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-26T14:18:42.515Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-26T14:22:17.362Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-26T14:22:17.371Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-26T14:22:59.387Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-26T14:22:59.399Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-26T14:26:27.024Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-26T14:26:27.033Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-26T14:27:04.925Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-26T14:27:04.934Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-26T14:27:39.330Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-26T14:27:39.338Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-26T14:28:19.062Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-26T14:28:19.071Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-26T14:39:16.513Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-26T14:39:16.527Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-26T14:41:45.036Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-26T14:41:45.045Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-26T15:09:30.342Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-26T15:09:30.350Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-26T15:16:07.373Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-26T15:16:07.382Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-26T15:17:30.647Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-26T15:17:30.654Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-26T16:53:01.781Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-26T16:53:01.789Z"}
+{"level":"error","message":"500 - Validation failed: category: `milk` is not a valid enum value for path `category`. - /api/products/683488b9fcceeaee3d28c2c9 - PUT - ::1","timestamp":"2025-05-26T19:22:24.315Z"}
+{"level":"error","message":"500 - Validation failed: category: `bitters` is not a valid enum value for path `category`. - /api/products/683488b9fcceeaee3d28c2df - PUT - ::1","timestamp":"2025-05-26T19:29:02.104Z"}
+{"level":"error","message":"500 - Validation failed: category: `bitters` is not a valid enum value for path `category`. - /api/products/683488b9fcceeaee3d28c2f3 - PUT - ::1","timestamp":"2025-05-26T19:29:25.943Z"}
+{"level":"error","message":"500 - Validation failed: category: `bitters` is not a valid enum value for path `category`. - /api/products/683488b9fcceeaee3d28c2cb - PUT - ::1","timestamp":"2025-05-26T19:30:12.620Z"}
+{"level":"error","message":"500 - Validation failed: category: `milk` is not a valid enum value for path `category`. - /api/products/683488b9fcceeaee3d28c2c9 - PUT - ::1","timestamp":"2025-05-26T19:32:10.822Z"}
+{"level":"error","message":"500 - Validation failed: category: `bitters` is not a valid enum value for path `category`. - /api/products/683488b9fcceeaee3d28c2cb - PUT - ::1","timestamp":"2025-05-26T19:32:56.882Z"}
+{"level":"error","message":"500 - Validation failed: category: `bitters` is not a valid enum value for path `category`. - /api/products/683488b9fcceeaee3d28c2cb - PUT - ::1","timestamp":"2025-05-26T19:33:07.699Z"}
+{"level":"error","message":"500 - Validation failed: category: `bitters` is not a valid enum value for path `category`. - /api/products/683488b9fcceeaee3d28c2cb - PUT - ::1","timestamp":"2025-05-26T19:33:07.971Z"}
+{"level":"error","message":"500 - Validation failed: category: `bitters` is not a valid enum value for path `category`. - /api/products/683488b9fcceeaee3d28c2df - PUT - ::1","timestamp":"2025-05-26T19:33:40.445Z"}
+{"level":"error","message":"500 - Validation failed: category: `others` is not a valid enum value for path `category`. - /api/products/6834c33bb46c1973a5791b32 - PUT - ::1","timestamp":"2025-05-26T19:38:55.507Z"}
+{"level":"error","message":"500 - Validation failed: category: `milk` is not a valid enum value for path `category`. - /api/products/6834c33bb46c1973a5791b0b - PUT - ::1","timestamp":"2025-05-26T19:39:13.274Z"}
+{"level":"error","message":"500 - Validation failed: category: `bitters` is not a valid enum value for path `category`. - /api/products/6834c33bb46c1973a5791b0d - PUT - ::1","timestamp":"2025-05-27T05:17:59.743Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-27T05:21:08.611Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-27T05:21:08.624Z"}
+{"level":"error","message":"500 - Validation failed: category: `soda` is not a valid enum value for path `category`. - /api/products/6834c33bb46c1973a5791b1c - PUT - ::1","timestamp":"2025-05-27T05:23:17.822Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-27T05:51:11.348Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-27T05:51:11.356Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-27T05:55:00.293Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-27T05:55:00.301Z"}
+{"level":"error","message":"500 - Validation failed: category: `bitters` is not a valid enum value for path `category`. - /api/products/6834c33bb46c1973a5791b11 - PUT - ::1","timestamp":"2025-05-27T06:04:57.269Z"}
+{"level":"error","message":"500 - Validation failed: category: `bitters` is not a valid enum value for path `category`. - /api/products/6834c33bb46c1973a5791b34 - PUT - ::1","timestamp":"2025-05-27T06:05:06.799Z"}
+{"level":"error","message":"500 - Validation failed: category: `bitters` is not a valid enum value for path `category`. - /api/products/6834c33bb46c1973a5791b40 - PUT - ::1","timestamp":"2025-05-27T06:05:14.443Z"}
+{"level":"error","message":"500 - Validation failed: category: `bitters` is not a valid enum value for path `category`. - /api/products/68355647b50f3220f3da10ba - PUT - ::1","timestamp":"2025-05-27T06:06:19.229Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-27T06:07:16.193Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-27T06:07:16.200Z"}
+{"level":"error","message":"500 - Validation failed: category: `bitters` is not a valid enum value for path `category`. - /api/products/68355647b50f3220f3da10bd - PUT - ::1","timestamp":"2025-05-27T06:07:22.450Z"}
+{"level":"error","message":"MongoDB connection error:","timestamp":"2025-05-27T07:25:23.992Z"}
+{"level":"error","message":"MongoDB connection error:","timestamp":"2025-05-27T07:28:43.368Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-27T07:31:41.030Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-27T07:31:41.038Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-28T18:52:36.690Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-28T18:52:36.698Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-28T20:42:56.704Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-28T20:42:56.711Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-29T08:17:04.743Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-29T08:17:04.752Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-29T09:31:31.550Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-29T09:31:31.557Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-29T09:34:36.477Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-29T09:34:36.486Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-29T09:42:48.061Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-29T09:42:48.073Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-29T09:48:09.151Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-29T09:48:09.158Z"}
+{"level":"error","message":"500 - Cast to ObjectId failed for value \"sales\" (type string) at path \"_id\" for model \"Order\" - /api/orders/sales - GET - ::1","timestamp":"2025-05-29T09:51:12.991Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-29T09:53:52.763Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-29T09:53:52.776Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-29T10:00:17.201Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-29T10:00:17.210Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-29T10:02:21.150Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-29T10:02:21.157Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-29T10:02:48.218Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-29T10:02:48.231Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-29T10:03:58.090Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-29T10:03:58.098Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-29T10:09:08.806Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-29T10:09:08.815Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-29T10:13:51.090Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-29T10:13:51.098Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-29T10:22:41.300Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-29T10:22:41.308Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-29T10:40:35.591Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-29T10:40:35.600Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-29T10:42:19.313Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-29T10:42:19.320Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-29T10:44:44.771Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-29T10:44:44.779Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-29T10:55:34.679Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-29T10:55:34.688Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-29T11:01:02.028Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-29T11:01:02.036Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-29T11:01:40.123Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-29T11:01:40.131Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-29T11:03:07.106Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-29T11:03:07.114Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-29T11:08:22.946Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-29T11:08:22.954Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-29T11:08:55.383Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-29T11:08:55.391Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-29T11:10:14.389Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-29T11:10:14.397Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-29T11:10:59.736Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-29T11:10:59.743Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-29T11:12:08.738Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-29T11:12:08.745Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-29T11:26:29.478Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-29T11:26:29.510Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-29T11:33:58.919Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-29T11:33:58.928Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-29T11:34:27.677Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-29T11:34:27.685Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-29T11:35:11.954Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-29T11:35:11.962Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-29T11:35:24.930Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-29T11:35:24.938Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-29T11:44:46.584Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-29T11:44:46.592Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-29T12:59:13.823Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-29T12:59:13.831Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-29T13:14:04.172Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-29T13:14:04.179Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-29T13:16:03.472Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-29T13:16:03.479Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-29T13:16:53.308Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-29T13:16:53.316Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-30T21:45:50.520Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-30T21:45:50.560Z"}
+{"level":"info","message":"Connected to MongoDB","timestamp":"2025-05-30T21:46:49.596Z"}
+{"level":"info","message":"Server running on port 5000","timestamp":"2025-05-30T21:46:49.630Z"}
