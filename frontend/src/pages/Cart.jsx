@@ -150,11 +150,11 @@ const handleCart = () => {
                 </div>
                 <div className="flex justify-between">
                   <span className="text-slate-400">Tax</span>
-                  <span>{formatCurrency(total * 0.1)}</span>
+                  <span>{formatCurrency(total * 0)}</span>
                 </div>
                 <div className="border-t border-slate-700 pt-3 flex justify-between font-bold text-lg">
                   <span>Total</span>
-                  <span>{formatCurrency(total * 1.1)}</span>
+                  <span>{formatCurrency(total)}</span>
                 </div>
               </div>
 
