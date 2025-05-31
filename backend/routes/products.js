@@ -47,6 +47,7 @@ router.put(
     check("barcode", "Barcode is required").optional(),
     check("category", "Category is required").optional(),
     check("stock", "Stock must be a non-negative number").optional().isInt({ min: 0 }),
+
   ],
   updateProduct,
 )

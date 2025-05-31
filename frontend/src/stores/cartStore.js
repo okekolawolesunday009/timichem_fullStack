@@ -41,7 +41,7 @@ export const useCartStore = create(
             headers: { Authorization: `Bearer ${token}` },
           });
 
-          console.log(response.data); // ✅ Confirm structure
+          // console.log(response.data); // ✅ Confirm structure
           set({ items: response.data, isLoading: false });
           return response.data; // ✅ Return only the data
         } catch (error) {
@@ -152,17 +152,20 @@ export const useCartStore = create(
           throw new Error(errorMsg); // <-- throw here instead of returning
         }
       },
-
       getItemCount: () => {
-        const items = get().items || [];
-        // console.log(items)
-        return items;
+        const rawItems = get().items;
+        const items = Array.isArray(rawItems) ? rawItems : [];
+        return items.reduce((count, item) => count + (item.quantity || 0), 0);
       },
 
       getTotal: () => {
-        const items = get().items || [];
-        // console.log(items)
-        return items;
+        const rawItems = get().items;
+        const items = Array.isArray(rawItems) ? rawItems : [];
+        return items.reduce((total, item) => {
+          const quantity = item.quantity || 0;
+          const price = item.price || 0;
+          return total + price * quantity;
+        }, 0);
       },
     }),
     {
