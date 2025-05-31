@@ -13,7 +13,7 @@ const AddProduct = () => {
   const { addProduct, categories, product, fetchProductById, updateProduct, isLoading } =
     useProductStore();
 
-    const [updateStock, setUpdateStock ] = useState("")
+  const [updateStock, setUpdateStock] = useState("")
 
   useEffect(() => {
     const getProduct = async () => {
@@ -106,15 +106,15 @@ const AddProduct = () => {
       const productData = {
         ...formData,
         price: Number.parseFloat(formData.price),
-       stock: id
-        ? Number.parseInt(product.stock || 0) + Number.parseInt(updateStock || 0)
-        : Number.parseInt(formData.stock),
+        stock: id
+          ? Number.parseInt(product.stock || 0) + Number.parseInt(updateStock || 0)
+          : Number.parseInt(formData.stock),
       };
       const { name, description, price, barcode, category, stock, image } =
         productData;
 
       if (id) {
-        updateProduct( id, productData);
+        updateProduct(id, productData);
       } else {
         addProduct(name, description, price, barcode, category, stock, image);
       }
@@ -129,7 +129,7 @@ const AddProduct = () => {
   return (
     <div className="fade-in">
       <div className="flex items-center justify-between mb-6">
-        <h1 className="text-2xl font-bold">{id ? "Update Product": "Add New Product"}</h1>
+        <h1 className="text-2xl font-bold">{id ? "Update Product" : "Add New Product"}</h1>
       </div>
 
       <div className="card max-w-3xl mx-auto">
@@ -169,9 +169,8 @@ const AddProduct = () => {
                 type="text"
                 value={formData.description}
                 onChange={handleChange}
-                className={`input ${
-                  errors.description ? "border-red-500" : ""
-                }`}
+                className={`input ${errors.description ? "border-red-500" : ""
+                  }`}
                 placeholder="Add description"
               />
               {errors.price && (
@@ -258,47 +257,67 @@ const AddProduct = () => {
               )}
             </div>
 
-           {/* Show current stock (disabled) */}
-{id && (
-  <div>
-    <label
-      htmlFor="currentStock"
-      className="block text-sm font-medium text-slate-300 mb-1"
-    >
-      Current Quantity*
-    </label>
-    <input
-      id="currentStock"
-      type="number"
-      disabled
-      value={formData.stock}
-      className="input"
-      placeholder="Current stock"
-    />
-  </div>
-)}
+            {/* Show current stock (disabled) */}
+            {id ? (
+              <div>
+                <label
+                  htmlFor="currentStock"
+                  className="block text-sm font-medium text-slate-300 mb-1"
+                >
+                  Current Quantity*
+                </label>
+                <input
+                  id="currentStock"
+                  type="number"
+                  disabled
+                  value={formData.stock}
+                  className="input"
+                  placeholder="Current stock"
+                />
+              </div>
+            ) : (
+              <div>
+                <label
+                  htmlFor="stock"
+                  className="block text-sm font-medium text-slate-300 mb-1"
+                >
 
-{/* Input for new stock to add */}
-<div>
-  <label
-    htmlFor="updateStock"
-    className="block text-sm font-medium text-slate-300 mb-1"
-  >
-    {id ? "Add Quantity*" : "Stock Quantity*"}
-  </label>
-  <input
-    id="updateStock"
-    name="updateStock"
-    type="number"
-    value={updateStock}
-    onChange={(e) => setUpdateStock(e.target.value)}
-    className={`input ${errors.stock ? "border-red-500" : ""}`}
-    placeholder="Enter quantity"
-  />
-  {errors.stock && (
-    <p className="mt-1 text-sm text-red-400">{errors.stock}</p>
-  )}
-</div>
+                  Stock*
+                </label>
+                <input
+                  id="stock"
+                  name="stock"
+                  type="number"
+                  // disabled
+                  value={formData.stock}
+                    onChange={handleChange}
+                className={`input ${errors.stock ? "border-red-500" : ""}`}
+                  placeholder="stock"
+                />
+              </div>
+            )}
+
+            {/* Input for new stock to add */}
+            {id && (<div>
+              <label
+                htmlFor="updateStock"
+                className="block text-sm font-medium text-slate-300 mb-1"
+              >
+                {id ? "Add Quantity*" : "Stock Quantity*"}
+              </label>
+              <input
+                id="updateStock"
+                name="updateStock"
+                type="number"
+                value={updateStock}
+                onChange={(e) => setUpdateStock(e.target.value)}
+                className={`input ${errors.stock ? "border-red-500" : ""}`}
+                placeholder="Enter quantity"
+              />
+              {errors.stock && (
+                <p className="mt-1 text-sm text-red-400">{errors.stock}</p>
+              )}
+            </div>)}
 
 
             <div>
@@ -364,7 +383,7 @@ const AddProduct = () => {
               ) : (
                 <span className="flex items-center">
                   <Save size={18} className="mr-1" />
-                 {id ? "Update Product" : " Save Product"}
+                  {id ? "Update Product" : " Save Product"}
                 </span>
               )}
             </button>

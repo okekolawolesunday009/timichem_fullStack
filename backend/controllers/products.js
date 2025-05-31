@@ -87,11 +87,6 @@ exports.getProduct = async (req, res, next) => {
   }
 };
 
-<<<<<<< HEAD
-// @desc    Update product
-// @route   PUT /api/products/:id
-// @access  Private/Admin
-=======
 // @desc    Create new product
 // @route   POST /api/products
 // @access  Private/Admin
@@ -136,7 +131,6 @@ exports.createProduct = async (req, res, next) => {
 // @desc    Get all products
 // @route   GET /api/products
 // @access  Private
->>>>>>> c3ceaa1ad1a3dc361c279dad4d50a9aa72da2496
 exports.updateProduct = async (req, res, next) => {
   try {
     const errors = validationResult(req);
@@ -156,16 +150,6 @@ exports.updateProduct = async (req, res, next) => {
       });
     }
 
-<<<<<<< HEAD
-    product = await Product.findByIdAndUpdate(req.params.id, req.body, {
-      new: true,
-      runValidators: true,
-    });
-
-    res.status(200).json({
-      success: true,
-     product,
-=======
     const { name, description, price, barcode, category, stock, image } = req.body;
 
     const previousStock = product.stock;
@@ -199,7 +183,6 @@ exports.updateProduct = async (req, res, next) => {
     res.status(200).json({
       success: true,
       product,
->>>>>>> c3ceaa1ad1a3dc361c279dad4d50a9aa72da2496
     });
   } catch (error) {
     next(error);
